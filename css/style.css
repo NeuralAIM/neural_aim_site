@@ -1,0 +1,1383 @@
+@font-face {
+  font-family: 'RF Dewi Extended';
+  src: url('../font/RFDewi-Black.woff2') format('woff2'),
+    url('../font/RFDewi-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RF Dewi Extended';
+  src: url('../font/RFDewi-BlackItalic.woff2') format('woff2'),
+    url('../font/RFDewi-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'RF Dewi Extended';
+  src: url('../font/RFDewi-Bold.woff2') format('woff2'),
+    url('../font/RFDewi-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RF Dewi Extended';
+  src: url('../font/RFDewi-BoldItalic.woff2') format('woff2'),
+    url('../font/RFDewi-BoldItalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'RF Dewi Extended';
+  src: url('../font/RFDewi-Regular.woff2') format('woff2'),
+    url('../font/RFDewi-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RF Dewi Extended';
+  src: url('../font/RFDewi-Italic.woff2') format('woff2'),
+    url('../font/RFDewi-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'RF Dewi Extended';
+  src: url('../font/RFDewi-Light.woff2') format('woff2'),
+    url('../font/RFDewi-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RF Dewi Extended';
+  src: url('../font/RFDewi-LightItalic.woff2') format('woff2'),
+    url('../font/RFDewi-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Пример использования */
+body {
+  font-family: 'RF Dewi Extended';
+  background-color: #0d0d0d;
+}
+::selection {
+
+  background: #ff1e4788; /* Safari */
+  
+  }
+  
+  ::-moz-selection {
+  
+  background: #ff1e4788; /* Firefox */
+  
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #fc4062;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #FF1E46;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #FF1E46;
+  }
+.btn-big {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 24px;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(225deg, #FF4B6B 12.5%, #FF1E46 59%);
+  transition: color 0.3s ease-in-out;
+}
+
+.btn-big::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(225deg, #FF4B6B 12.5%, #FF1E46 59%);
+  transition: background 0.3s ease-in-out;
+  z-index: -1;
+}
+.btn-big-active {
+  background: linear-gradient(225deg, #FFB9D9 12.5%, #FF78A0 59%);
+
+  transition: background 0.3s ease-in-out;
+}
+.btn-big-active {
+  
+  background: linear-gradient(225deg, #FFB9D9 12.5%, #FF78A0 59%) !important;
+}
+.btn-big:hover::before {
+  background: linear-gradient(225deg, #FF87A7 12.5%, #FF5078 59%);
+}
+
+.btn-big:hover {
+  color: black;
+  /* или любой другой стиль, который хотите изменить при наведении */
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.header {
+  padding: 32px 0;
+  background: #0d0d0d9d;
+  position: fixed;
+  width: 100%;
+  z-index: 9999999999;    backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+}
+
+.hero {
+  height: 100vh;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  /* затемнение */
+  z-index: 9999;
+}
+
+.main {
+  z-index: 999999;
+  position: relative;
+}
+
+.container {
+  max-width: 1660px;
+  padding: 0 30px;
+  margin: auto;
+}
+
+.test {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  /* Измените по необходимости */
+}
+
+.test::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  /* Затемнение */
+  z-index: 99999999;
+  display: none;
+  /* Скрыто по умолчанию */
+}
+
+.test__video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  display: none;
+  /* Скрыто по умолчанию */
+}
+
+
+.test__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  /* Для предотвращения взаимодействия с видео */
+}
+.subs {
+  position: relative;
+}
+.subs::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  /* Затемнение */
+  z-index: 99999999;
+  /* Скрыто по умолчанию */
+}
+.subs .subs__title, .subs__items {
+  z-index: 99999999;position: relative;
+}
+.subs__video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  /* Скрыто по умолчанию */
+}
+
+
+.subs__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  /* Для предотвращения взаимодействия с видео */
+}
+
+
+.header__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {}
+
+.header__list {}
+
+.header__item:hover {
+  background: linear-gradient(225deg, #FF4B6B 12.5%, #FF1E46 59%);
+  color: #000;
+  transition: .3s ease-in-out all;
+}
+.header__item-active {
+  background: linear-gradient(225deg, #FF4B6B 12.5%, #FF1E46 59%);
+  color: #000 !important;
+  transition: .3s ease-in-out all;
+}
+.header__item {
+  font-family: RF Dewi Extended;
+  font-size: 20px;
+  transition: .3s ease-in-out all;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  padding: 12px 24px;
+  border-radius: 12px;
+  color: #fff;
+}
+.header {
+  
+  transition: .3s all ease-in-out;
+}
+.header-active {
+  background: rgb(0,0,0);
+  transition: .3s all ease-in-out;
+  opacity: 1;
+  background: #36020b6c;}
+.header__btn {
+  border: 1px solid #FF1E46;
+  border-radius: 12px;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(266.39deg, rgba(255, 30, 70, 0.25) 0%, rgba(255, 30, 70, 0.05) 100%);
+
+  transition: .3s ease-in-out all;
+  align-items: center;
+}
+
+
+.header__btn:hover {
+  background: linear-gradient(225deg, #FF4B6B 12.5%, #FF1E46 59%);
+  transition: .3s ease-in-out all;
+
+}
+.header__btn:active {
+  background: linear-gradient(45deg, #FF4B6B 12.5%, #FF1E46 59%);
+  color: black;
+  fill: #000;
+  transition: .3s ease-in-out all;
+
+}
+.header__btn.btn-mini.active .header__img svg path {
+    stroke: white; /* Изменить цвет обводки иконки */
+}
+
+.header__btn.btn-mini.active .header__btn-title {
+    color: white; /* Изменить цвет текста */
+}
+.header__btn:hover .header__btn-title {
+  color: #000;
+  transition: .3s ease-in-out all;
+}
+
+.header__btn:hover svg>* {
+  fill: #000;
+  transition: .3s ease-in-out all;
+}
+
+.header__btn .header__img {
+  margin-right: 8px;
+  display: flex;
+}
+
+.header__btn-title {
+  color: #FF1E46;
+  font-family: RF Dewi Extended;
+  font-size: 20px;
+  font-weight: 400;
+  transition: .3s ease-in-out all;
+  line-height: 24px;
+  text-align: left;
+
+}
+
+.btn-big {
+  background: linear-gradient(225deg, #FF4B6B 12.5%, #FF1E46 59%);
+  border-radius: 24px;
+
+  transition: all .3s ease-in-out;
+}
+
+.btn-big:hover {
+  background: linear-gradient(225deg, #FF87A7 12.5%, #FF5078 59%);
+
+  transition: all .3s ease-in-out;
+}
+
+.main {
+  padding-top: 15%;
+  height: 100%;
+}
+
+.main__title {
+  font-family: RF Dewi Extended;
+  font-size: 64px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 76.8px;
+  text-align: left;
+  color: #fff;
+
+}
+
+.red {
+  color: #FF1E46;
+  font-family: RF Dewi Extended;
+  font-size: 64px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 76.8px;
+  text-align: left;
+
+}
+
+.main .container {
+  height: 100%;
+}
+
+.main__info {
+  height: 60%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.main__btn {
+  padding: 26px 132px;
+  font-family: RF Dewi Extended;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  color: #000;
+}
+
+.main__description {
+  font-family: RF Dewi Extended;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+  color: #CE99A4;
+  display: block;
+  width: 100%;
+  margin-top: 32px;
+}
+
+.main__description a {
+  text-decoration: underline;
+  color: #CE99A4;
+}
+.main__description a:hover {
+  color: #CE99A4;
+  text-shadow: 0 0 40px #FF1E46;
+}
+
+.functional {
+  position: relative;
+  padding-top: 128px;
+}
+
+.functional__title {
+  font-family: RF Dewi Extended;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 57.6px;
+  text-align: left;
+  color: #fff;
+  width: 100%;
+  display: block;
+  margin-top: 48px;
+  margin-bottom: 32px;
+}
+
+.title {
+  font-family: RF Dewi Extended;
+  font-size: 64px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 76.8px;
+  display: block;
+  color: #fff;
+  text-align: center;
+}
+
+.functional__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 96px;
+}
+
+.functional__item {
+  width: 31%;
+  flex: 0 1 31%;
+  padding: 48px;
+  border-radius: 24px;
+
+  margin-bottom: 48px;
+  border: 1px solid #50505D
+}
+
+.functional__item-bage {
+  background: linear-gradient(266.39deg, rgba(255, 30, 70, 0.25) 0%, rgba(255, 30, 70, 0.05) 100%);
+  color: #FF1E46;
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: 1px solid #FF1E46;
+
+
+  font-family: RF Dewi Extended;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  
+}
+.functional__item-bage-custom {
+  background: transparent;
+  color: transparent;
+  border: transparent;
+}
+.functional__img {
+  max-width: 428px;
+  max-height: 292px;
+  min-height: 292px;
+  width: 100%;
+  margin: auto;
+}
+
+
+.functional__description {
+  font-family: RF Dewi Extended;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  color: #50505D;
+
+}
+
+.footer {
+  padding: 96px 0;
+  text-align: center;
+}
+
+.footer__title {
+  font-family: RF Dewi Extended;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: right;
+  color: #50505D;
+  text-align: center;
+}
+
+.functional__item {
+
+  transition: .3s all ease-in-out;
+}
+
+.functional__item:hover {
+  background: linear-gradient(205.85deg, rgba(255, 30, 70, 0.3) 0%, rgba(255, 30, 70, 0.15) 26.9%, rgba(255, 30, 70, 0.01) 81.4%);
+  border-color: #FF1E46;
+
+  transition: .3s all ease-in-out;
+}
+
+.functional__item:hover .functional__title {
+  color: #FF1E46;
+  transition: .3s all ease-in-out;
+}
+
+.functional__item:hover .functional__description {
+  color: #CE99A4;
+
+  transition: .3s all ease-in-out;
+}
+
+.footer__social {
+  margin-top: 24px;
+}
+
+.footer__social-item svg>* {
+  fill: #50505D;
+  transition: .2s all ease-in-out;
+  margin: 0 8px;
+}
+
+.footer__social-item:hover svg path {
+  fill: #FF1E46;
+  transition: .2s all ease-in-out;
+}
+
+
+.subs {
+  padding: 128px 0;
+}
+
+.container {}
+
+.subs__title {}
+
+.title {}
+
+.subs__items {
+  margin-top: 96px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.subs__item {
+  flex: 0 1 32%;
+  height: 100%;
+  border: 1px solid #50505D;
+  border-radius: 24px;
+  transition: .3s all ease-in-out;
+}
+
+.subs__item-text {
+  padding: 64px;
+}
+
+.subs__item-text img {
+  width: 70px;
+  position: relative;
+  top: 5px;
+}
+
+.subs__item-title {
+  margin-bottom: 32px;
+  display: block;
+  font-family: RF Dewi Extended;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 57.6px;
+  text-align: center;
+  color: #fff;
+}
+
+.subs__item-description {
+  font-family: RF Dewi Extended;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  color: #50505D;
+}
+
+
+
+.sub__item-btn {
+  display: flex;
+  padding: 25px 30px;
+  font-family: RF Dewi Extended;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  transition: .3s all ease-in-out;
+  color: #000;
+  justify-content: space-between;
+  text-align: center;
+  background: #fff;
+}
+
+.subs__item:first-child .sub__item-btn {
+  justify-content: center;
+  transition: .3s all ease-in-out;
+}
+
+.subs__item:hover {
+
+  transition: .3s all ease-in-out;
+  border: 1px solid #FF1E46;
+  background: linear-gradient(205.85deg, rgba(255, 30, 70, 0.3) 0%, rgba(255, 30, 70, 0.15) 26.9%, rgba(255, 30, 70, 0.01) 81.4%);
+
+}
+
+.subs__item:hover .sub__item-btn {
+  background: linear-gradient(225deg, #FF4B6B 12.5%, #FF1E46 59%);
+  transition: .3s all ease-in-out;
+}
+
+.subs__item:hover .subs__item-title {
+  color: #FF1E46;
+  transition: .3s all ease-in-out;
+}
+
+.big-btn {}
+
+
+.accordion {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 96px;
+}
+
+.accordion-item {
+  margin-bottom: 15px;
+  background: transparent;
+  border: 1px solid #50505D;
+  background: transparent;
+  border-radius: 24px;
+}
+
+.accordion-header {
+  width: 100%;
+  text-align: left;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #50505D;
+  border: 1px solid #50505D;
+  background: transparent;
+  border-radius: 24px;
+  padding: 34px;
+  font-family: RF Dewi Extended;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28.8px;
+  text-align: left;
+
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: transparent;
+  padding: 0 10px;
+  color: #CE99A4;
+}
+
+.accordion-content a {
+  color: #CE99A4;
+}
+
+.accordion-content p {
+  margin: 34px;
+
+  font-family: RF Dewi Extended;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  transition: .3s all ease-in-out;
+}
+
+.arrow {
+
+  transition: .3s all ease-in-out;
+}
+
+.accordion-header.active .arrow {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.accordion-item:hover .accordion-header {
+  color: #FF1E46;
+  transition: .3s all ease-in-out;
+  border: 1px solid #FF1E46;
+  background: linear-gradient(205.85deg, rgba(255, 30, 70, 0.3) 0%, rgba(255, 30, 70, 0.15) 26.9%, rgba(255, 30, 70, 0.01) 81.4%);
+
+}
+
+.accordion-item:hover .arrow svg path {
+  fill: #FF1E46 !important;
+  transition: .3s all ease-in-out;
+}
+
+.accordion-item .active .arrow svg path {
+  fill: #000 !important;
+  transition: .3s all ease-in-out;
+}
+
+.accordion-item .active {
+  background: linear-gradient(225deg, #FF4B6B 12.5%, #FF1E46 59%) !important;
+  color: #000 !important;
+  transition: .3s all ease-in-out;
+
+}
+
+.accordion-item:hover {
+  border: 1px solid #FF1E46;
+  transition: .3s all ease-in-out;
+}
+
+.accordion-item:hover {
+  background: linear-gradient(205.85deg, rgba(255, 30, 70, 0.3) 0%, rgba(255, 30, 70, 0.15) 26.9%, rgba(255, 30, 70, 0.01) 81.4%);
+  transition: .3s all ease-in-out;
+}
+
+.active-item {
+  background: linear-gradient(205.85deg, rgba(255, 30, 70, 0.3) 0%, rgba(255, 30, 70, 0.15) 26.9%, rgba(255, 30, 70, 0.01) 81.4%);
+  transition: .3s all ease-in-out;
+  border: 1px solid #FF1E46;
+}
+
+
+.test {
+  padding-top: 128px;
+  padding-bottom: 32px;
+  text-align: center;
+  background-image: url('../img/svg/test.svg');
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.container {}
+
+.test__title {}
+
+.title {}
+
+.test__subtitle {
+  font-family: RF Dewi Extended;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  color: #50505D;
+  display: block;
+  margin-top: 32px;
+  padding-bottom: 96px;
+}
+
+.test__btn {
+  padding: 26px 132px;
+  display: inline-block;
+  margin: auto;
+  font-family: RF Dewi Extended;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  color: #0D0D0D;
+  margin-bottom: 96px;
+}
+
+.big-btn {}
+
+.test__policy {
+  display: block;
+  font-family: RF Dewi Extended;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+  color: #CE99A4;
+}
+
+.quest {
+  padding: 96px 0;
+}
+
+.test__policy a {
+  text-decoration: underline;
+  color: #CE99A4;
+}
+
+.title {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+.quest {
+  position: relative;
+}
+
+.ball-1 {
+  width: 100px;
+  height: 100px;
+  background-image: url('../img/svg/blink.svg');
+  position: absolute;
+  display: block;
+  right: 30%;
+  top: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: blink 3s infinite ease-in-out;
+  /* Интенсивное красное свечение */
+}
+
+.ball-2 {
+  width: 400px;
+  height: 500px;
+  background-image: url('../img/svg/blink.svg');
+  position: absolute;
+  display: block;
+  left: -250px;
+  top: 60%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: blink 3s infinite ease-in-out;
+  /* Интенсивное красное свечение */
+}
+
+.ball-3 {
+  width: 400px;
+  height: 500px;
+  background-image: url('../img/svg/blink.svg');
+  position: absolute;
+  display: block;
+  right: -200px;
+  top: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: blink 3s infinite ease-in-out;
+  /* Интенсивное красное свечение */
+}
+
+.ball-5 {
+  width: 200px;
+  height: 200px;
+  background-image: url('../img/svg/blink.svg');
+  position: absolute;
+  display: block;
+  right: 50px;
+  top: 99%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: blink 3s infinite ease-in-out;
+  /* Интенсивное красное свечение */
+}
+
+.accordion {
+  z-index: 99999;
+  position: relative;
+}
+
+.ball-4 {
+  width: 200px;
+  height: 200px;
+  background-image: url('../img/svg/blink.svg');
+  position: absolute;
+  display: block;
+  left: 50px;
+  top: 600px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: blink 3s infinite ease-in-out;
+  /* Интенсивное красное свечение */
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1.3;
+  }
+}
+
+.privacy {
+  padding-top: 250px;
+  padding-bottom: 96px;
+  color: #fff;
+}
+
+.container {}
+
+.privacy__title {
+  margin-bottom: 96px;
+}
+
+.title {}
+
+.privacy__block {
+  padding-bottom: 32px;
+}
+
+.privacy__block-title {
+  font-family: RF Dewi Extended;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43.2px;
+  text-align: left;
+
+}
+
+.privacy__info {
+  font-family: RF Dewi Extended;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 96px;
+  padding-bottom: 32px;
+
+}
+
+.privacy__block-element span {
+
+  padding: 16px 0;
+  display: block;
+}
+
+.privacy__block-element {
+  font-family: RF Dewi Extended;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+
+}
+
+.main__description-m {
+  display: none;
+}
+
+@media (max-width:900px) {
+  .header__logo {
+    width: 106px;
+  }
+
+  .main__description {
+    display: none;
+  }
+
+  .main__description-m {
+    display: block;
+  }
+
+  .header__list {
+    display: none;
+  }
+
+  .functional__items {
+    margin-top: 28px;
+  }
+
+  .header__btn {
+    border: none;
+    background: none !important;
+  }
+
+  .header__btn-title {
+    display: none;
+  }
+
+  .header {
+    padding: 24px 0;
+  }
+
+  .main__title,
+  .main__title span {
+    font-family: RF Dewi Extended;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 43.2px;
+    text-align: center;
+
+  }
+
+  .main__btn {
+    padding: 20px 123px;
+
+  }
+
+  .title {
+    font-family: RF Dewi Extended;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 38.4px;
+    text-align: center;
+
+  }
+
+  .btn-big {
+    font-family: RF Dewi Extended;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.2px;
+
+  }
+
+  .main {
+    padding-top: 200px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .functional__items {
+    flex-wrap: wrap;
+  }
+
+
+
+  .functional__item span {
+    font-family: RF Dewi Extended;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 19.2px;
+    text-align: left;
+
+  }
+
+  .functional__item-bage {
+    font-family: RF Dewi Extended;
+    font-size: 8px !important;
+    font-weight: 400 !important;
+    line-height: 9.6px !important;
+    text-align: left;
+    padding: 6px 12px;
+    border-radius: 6px;
+
+
+  }
+
+  .test {
+    height: 100vh;
+    padding-top: 28px;
+    position: relative;
+  }
+
+  .test__policy {}
+
+  .functional__item p {
+    font-family: RF Dewi Extended;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 12px;
+    text-align: left;
+
+  }
+
+  .functional__item {
+    width: 46%;
+    padding: 18px;
+    flex: 0 1 48%;
+    margin-bottom: 12px;
+  }
+
+  .functional__item span {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  .functional__img {
+    object-fit: contain;
+    width: 100% !important;
+    height: 100px;
+    width: auto !important;
+    max-width: 100%;
+    max-height: auto;
+    min-width: auto;
+    min-height: auto;
+    text-align: center;
+    display: block;
+  }
+
+  .subs {
+    padding: 48px 0;
+  }
+
+  .subs__items {
+    flex-direction: column;
+  }
+
+  .test__info {
+    z-index: 9999999;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    justify-content: space-between;
+  }
+
+  .test__subtitle {
+    color: #CE99A4;
+    font-family: RF Dewi Extended;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+
+  }
+
+  .subs__item {
+    margin-bottom: 24px;
+  }
+
+  .subs__item-title {
+    font-family: RF Dewi Extended;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 38.4px;
+
+  }
+
+  .subs__item-description {
+    font-family: RF Dewi Extended;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+
+  }
+
+  .subs__item-description img {
+    width: 50px;
+  }
+
+  .subs__item-text {
+    padding: 32px;
+  }
+
+  .subs__item-text img {
+    display: none;
+  }
+
+
+  .sub__item-btn {
+    font-family: RF Dewi Extended;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.2px;
+    text-align: left;
+
+  }
+
+  .subs__item:nth-child(2) .subs__item-title {
+    color: #FF1E46;
+  }
+
+  .subs__item:nth-child(2) .sub__item-btn {
+    background: linear-gradient(225deg, #FF4B6B 12.5%, #FF1E46 59%);
+
+  }
+
+  .subs__item:nth-child(2) {
+    background: linear-gradient(205.85deg, rgba(255, 30, 70, 0.3) 0%, rgba(255, 30, 70, 0.15) 26.9%, rgba(255, 30, 70, 0.01) 81.4%);
+    border: 1px solid #FF1E46;
+    border-radius: 24px;
+
+
+
+  }
+
+  .accordion-content p {
+    margin: 15px;
+  }
+
+  .quest {
+    padding: 24px 0;
+  }
+
+  .header-active {
+  }
+
+  .quest .ball-3 {
+    display: none;
+  }
+
+  .quest .ball-4 {
+    display: none;
+  }
+
+  .accordion-header {
+    font-family: RF Dewi Extended;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    padding: 20px;
+  }
+
+  .privacy {
+    padding-top: 150px;
+    padding-bottom: 0;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .privacy__title {
+    margin-bottom: 24px;
+  }
+
+  .privacy__block-title {
+    font-family: RF Dewi Extended;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: left;
+
+  }
+
+  .functional {
+    padding-top: 0;
+  }
+
+  .subs__items,
+  .accordion {
+    margin-top: 24px;
+  }
+
+  .privacy__block-element {
+    font-family: RF Dewi Extended;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+
+  }
+
+  .privacy__info {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+
+/* Медиа-запрос для показа видео только на мобильных устройствах */
+@media (max-width: 900px) {
+  .test__video-wrapper {
+    display: block;
+  }
+
+  .test__info {
+    z-index: 99999988889;
+    position: relative;
+  }
+
+  .test::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: rgba(0, 0, 0, 0.7);
+    /* Затемнение */
+  }
+
+
+  .header {
+    z-index: 999999999999999999999;
+  }
+
+  .header__btn {
+    width: 20px;
+    height: 20px;
+  }
+
+  .btn-big {
+    padding: 26px 26px;
+    width: 100%;
+    text-align: center;
+  }
+}
