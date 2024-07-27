@@ -85,12 +85,13 @@ body {
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #fc4062;
+    background: #0D0D0D;
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #FF1E46;
+    border-radius: 20px;
   }
   
   /* Handle on hover */
@@ -111,7 +112,10 @@ body {
   background: linear-gradient(225deg, #FF4B6B 12.5%, #FF1E46 59%);
   transition: color 0.3s ease-in-out;
 }
-
+.btn-big a {
+  
+  color: #000;
+}
 .btn-big::before {
   content: "";
   position: absolute;
@@ -128,11 +132,13 @@ body {
 
   transition: background 0.3s ease-in-out;
 }
-.btn-big-active {
+.btn-big:active {
   
+  transition: background 0.3s ease-in-out;
   background: linear-gradient(225deg, #FFB9D9 12.5%, #FF78A0 59%) !important;
 }
 .btn-big:hover::before {
+  transition: background 0.3s ease-in-out;
   background: linear-gradient(225deg, #FF87A7 12.5%, #FF5078 59%);
 }
 
@@ -253,7 +259,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.9);
   /* Затемнение */
   z-index: 99999999;
   /* Скрыто по умолчанию */
@@ -302,7 +308,8 @@ html {
   transition: .3s ease-in-out all;
 }
 .header__item-active {
-  background: linear-gradient(225deg, #FF4B6B 12.5%, #FF1E46 59%);
+  background: linear-gradient(45deg, #FF4B6B 12.5%, #FF1E46 59%);
+
   color: #000 !important;
   transition: .3s ease-in-out all;
 }
@@ -325,7 +332,7 @@ html {
   background: rgb(0,0,0);
   transition: .3s all ease-in-out;
   opacity: 1;
-  background: #36020b6c;}
+  background: #36020b2b ;}
 .header__btn {
   border: 1px solid #FF1E46;
   border-radius: 12px;
@@ -438,7 +445,6 @@ html {
 }
 
 .main__btn {
-  padding: 26px 132px;
   font-family: RF Dewi Extended;
   font-size: 20px;
   font-weight: 600;
@@ -447,6 +453,11 @@ html {
   color: #000;
 }
 
+.main__btn a {
+display: block;
+  padding: 20px 123px;
+
+}
 .main__description {
   font-family: RF Dewi Extended;
   font-size: 14px;
@@ -667,10 +678,10 @@ html {
 
 .sub__item-btn {
   display: flex;
-  padding: 25px 30px;
   font-family: RF Dewi Extended;
   font-size: 20px;
   font-weight: 600;
+  width: 100%;
   line-height: 24px;
   text-align: left;
   transition: .3s all ease-in-out;
@@ -679,10 +690,17 @@ html {
   text-align: center;
   background: #fff;
 }
+.sub__item-btn a {
+  display: flex;
+  width: 100%;
+  padding: 20px 30px;
+  justify-content: space-between;
+}
 
-.subs__item:first-child .sub__item-btn {
+.subs__item:first-child  .sub__item-btn a {
   justify-content: center;
   transition: .3s all ease-in-out;
+  display: flex;
 }
 
 .subs__item:hover {
@@ -823,7 +841,7 @@ html {
   text-align: center;
   background-image: url('../img/svg/test.svg');
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
 }
 
 .container {}
@@ -843,9 +861,10 @@ html {
   margin-top: 32px;
   padding-bottom: 96px;
 }
-
+.main__btn-m {
+  display: none;
+}
 .test__btn {
-  padding: 26px 132px;
   display: inline-block;
   margin: auto;
   font-family: RF Dewi Extended;
@@ -855,6 +874,10 @@ html {
   text-align: center;
   color: #0D0D0D;
   margin-bottom: 96px;
+}
+.test__btn a {
+display: block;
+  padding: 20px 132px;
 }
 
 .big-btn {}
@@ -870,7 +893,8 @@ html {
 }
 
 .quest {
-  padding: 96px 0;
+  padding: 96px 0 0px 0px;
+  margin-bottom: 96px;
 }
 
 .test__policy a {
@@ -1032,7 +1056,7 @@ html {
   display: none;
 }
 
-@media (max-width:900px) {
+@media (max-width:1200px) {
   .header__logo {
     width: 106px;
   }
@@ -1077,7 +1101,7 @@ html {
 
   }
 
-  .main__btn {
+  .main__btn a {
     padding: 20px 123px;
 
   }
@@ -1097,9 +1121,12 @@ html {
     font-size: 16px;
     font-weight: 600;
     line-height: 19.2px;
-
+    padding: 0 !important;
   }
-
+.btn-big a {
+  display: flex;
+  justify-content: center;
+}
   .main {
     padding-top: 200px;
   }
@@ -1146,11 +1173,17 @@ html {
 
   .functional__item p {
     font-family: RF Dewi Extended;
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 400;
     line-height: 12px;
     text-align: left;
 
+  }
+  .main__btn {
+    display: none;
+  }
+  .main__btn-m {
+    display: block;
   }
 
   .functional__item {
@@ -1168,7 +1201,7 @@ html {
   .functional__img {
     object-fit: contain;
     width: 100% !important;
-    height: 100px;
+    height: 140px;
     width: auto !important;
     max-width: 100%;
     max-height: auto;
@@ -1281,7 +1314,9 @@ html {
   .quest .ball-3 {
     display: none;
   }
-
+  .btn-big a {
+    justify-content: space-between;
+  }
   .quest .ball-4 {
     display: none;
   }
@@ -1343,7 +1378,7 @@ html {
 
 
 /* Медиа-запрос для показа видео только на мобильных устройствах */
-@media (max-width: 900px) {
+@media (max-width: 1220px) {
   .test__video-wrapper {
     display: block;
   }

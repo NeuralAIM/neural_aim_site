@@ -23,11 +23,11 @@
             <img src="img/svg/logo.svg" alt="" class="header__logo">
           </a>
           <div class="header__list">
-            <a href="#main" class="header__item" data-ru="Главная" data-en="Home">Главная</a>
+            <a href="#main"  class="header__item" data-ru="Главная" data-en="Home">Главная</a>
             <a href="#functional" class="header__item" data-ru="Функционал" data-en="Features">Функционал</a>
             <a href="#subs" class="header__item" data-ru="Подписки" data-en="Subscriptions">Подписки</a>
             <a href="#quest" class="header__item" data-ru="Вопросы" data-en="FAQ">Вопросы</a>
-            <a href="#footer" class="header__item" data-ru="Контакты" data-en="Contacts">Контакты</a>
+            <a href="#test" class="header__item" data-ru="Контакты" data-en="Contacts">Контакты</a>
           </div>
           <button class="header__btn btn-mini" id="language-toggle">
             <div class="header__img">
@@ -51,7 +51,17 @@
           <span class="red" id="dynamic">Valorant</span>
         </div>
         <div class="main__info">
-          <a href="#" class="main__btn btn-big" data-ru="Установить" data-en="Install">Установить</a>
+          <button class="main__btn btn-big">
+            <a href="https://ya.ru" target="_blank" class="" data-ru="Установить" data-en="Install">
+            Установить
+            </a>
+          </button>
+          <button class="main__btn btn-big main__btn-m">
+            <a href="https://ya.ru" target="_blank" class="" data-ru="Обсудить" data-en="Discuss">
+            Обсудить
+            </a>
+          </button>
+          
           <p class="main__description"
             data-ru='При нажатии на кнопку “Установить”, вы соглашаетесь с <a href="privacy.html">пользовательским соглашением</a>'
             data-en='By clicking the “Install” button, you agree to the <a href="privacy.html">user agreement</a>'>
@@ -153,7 +163,10 @@
               Ограниченный пробный доступ<br> Работает только во время стрельбы
             </p>
           </div>
-          <a href="#" class="sub__item-btn btn-big" data-ru="Установить" data-en="Install">Установить</a>
+          <button class="sub__item-btn btn-big">
+
+            <a href="https://ya.ru" target="_blank" class="" data-ru="Установить" data-en="Install">Установить</a>
+          </button>
         </div>
         <div class="subs__item">
           <div class="subs__item-text">
@@ -164,10 +177,13 @@
               Доступ ко всем функциям <img src="img/svg/NAIM.svg" alt=""><br> Создавайте скрипты NAPI
             </p>
           </div>
-          <a href="#" class="sub__item-btn btn-big">
-            <span data-ru="Приобрести" data-en="Purchase">Приобрести</span>
-            <span>999Р</span>
-          </a>
+          <div class="sub__item-btn btn-big">
+            <a href="https://ya.ru" target="_blank" class="">
+              <span data-ru="Приобрести" data-en="Purchase">Приобрести</span>
+              <span>999Р</span>
+            </a>
+          </div>
+      
         </div>
         <div class="subs__item">
           <div class="subs__item-text">
@@ -178,10 +194,13 @@
               Доступ ко всем функциям <img src="img/svg/NAIM.svg" alt=""><br> Аппаратный обход всех античитов
             </p>
           </div>
-          <a href="#" class="sub__item-btn btn-big">
-            <span data-ru="Приобрести" data-en="Purchase">Приобрести</span>
-            <span>1699Р</span>
-          </a>
+          <button class="sub__item-btn btn-big">
+            <a href="https://ya.ru" target="_blank" class="">
+              <span data-ru="Приобрести" data-en="Purchase">Приобрести</span>
+              <span>1699Р</span>
+            </a>
+          </button>
+     
         </div>
       </div>
     </div>
@@ -301,7 +320,7 @@
     </div>
   </section>
 
-  <section class="test">
+  <section class="test" id="test">
     <div class="test__video-wrapper">
       <video autoplay muted loop class="test__video">
         <source src="./NAIM.mp4" type="video/mp4">
@@ -319,7 +338,10 @@
           <br>
           Никаких сложных установок, запустил и играешь!
         </p>
-        <a href="#" class="test__btn btn-big" data-ru="Установить" data-en="Install">Установить</a>
+        <button class="test__btn btn-big">
+
+          <a href="https://ya.ru" target="_blank" class="" data-ru="Установить" data-en="Install">Установить</a>
+        </button>
         <span class="test__policy"
           data-ru="При нажатии на кнопку “Установить”, вы соглашаетесь с <a href='privacy.html'>пользовательским соглашением</a>"
           data-en="By clicking the 'Install' button, you agree to the <a href='privacy.html'>terms of service</a>">
@@ -373,12 +395,10 @@
   <script src="js/script.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // Функция для проверки, является ли устройство мобильным
       function isMobileDevice() {
-        return window.innerWidth <= 768; // Можно настроить ширину по своему усмотрению
+        return window.innerWidth <= 768;
       }
 
-      // Функция для прокрутки к элементу
       function scrollToElement(selector) {
         const element = document.querySelector(selector);
         if (element) {
@@ -386,7 +406,6 @@
         }
       }
 
-      // Проверка на мобильное устройство и прокрутка
       if (isMobileDevice()) {
         scrollToElement('.test');
       }

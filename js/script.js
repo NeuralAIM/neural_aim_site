@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', handleScroll);
 
   const header = document.querySelector('.header');
-  const scrollThreshold = 50; // Количество пикселей для смены градиента
+  const scrollThreshold = 50; 
   
   function handleScroll() {
     if (window.scrollY > 50) {
@@ -111,49 +111,37 @@ if (commentValue) {
 
 document.addEventListener("DOMContentLoaded", function () {
   const navItems = document.querySelectorAll('.header__item');
-  const sections = document.querySelectorAll('section');
-  const headerList = document.querySelector('.header__list');
-  const offset = 10; // отступ для срабатывания активации
+  const sections = document.querySelectorAll('section'); // Assuming your blocks are <section> elements
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5 // Trigger when 50% of the section is in view
+  };
 
-  // Функция для добавления класса активности при клике
+  // Function to remove and add active class
+  function setActiveClass(target) {
+    navItems.forEach(nav => nav.classList.remove('header__item-active'));
+    target.classList.add('header__item-active');
+  }
+
   navItems.forEach(item => {
-    item.addEventListener('click', function (event) {
-      navItems.forEach(nav => nav.classList.remove('header__item-active'));
-      this.classList.add('header__item-active');
+    item.addEventListener('click', function () {
+      setActiveClass(this);
     });
   });
 
-  // Функция для обновления класса активности при скролле
-  const handleScroll = () => {
-    let currentSection = '';
-
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - offset;
-      if (window.pageYOffset >= sectionTop) {
-        currentSection = section.getAttribute('id');
-      }
-    });
-
-    navItems.forEach(item => {
-      item.classList.remove('header__item-active');
-      if (item.getAttribute('href').substring(1) === currentSection) {
-        item.classList.add('header__item-active');
+  const observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        const activeNavItem = document.querySelector(`.header__item[href="#${id}"]`);
+        setActiveClass(activeNavItem);
       }
     });
   };
 
-  window.addEventListener('scroll', handleScroll);
-  handleScroll(); // обновить активный элемент при загрузке страницы
-});
-const btnBigItems = document.querySelectorAll('.btn-big');
-
-  btnBigItems.forEach(item => {
-    item.addEventListener('click', function () {
-      btnBigItems.forEach(btn => btn.classList.remove('btn-big-active'));
-      this.classList.add('btn-big-active');
-
-      setTimeout(() => {
-        this.classList.remove('btn-big-active');
-      }, 2000); 
-    });
+  const observer = new IntersectionObserver(observerCallback, options);
+  sections.forEach(section => {
+    observer.observe(section);
   });
+});
