@@ -720,7 +720,36 @@ display: block;
   color: #FF1E46;
   transition: .3s all ease-in-out;
 }
+.subs__item-description {
+  justify-content: center;
+  align-items: center;
+  transition: .3s all ease-in-out;
+}
+.subs__item-description  svg {
+  height: 25px;
+}
+.subs__item:hover .subs__item-description {
+  color: #CE99A4 !important;
+  fill:#CE99A4;
+  transition: .05s  ease-in-out;
+}
 
+.subs__item:hover .subs__item-description  svg path {
+
+transition: .05s  ease-in-out;
+  fill: #CE99A4;
+}
+.subs__item:hover .subs__item-description  path  {
+border-color: #CE99A4;
+
+transition: .05s all ease-in-out;
+}
+.subs__item:hover .subs__item-description rect {
+  border-color: #CE99A4 !important;
+  stroke:#CE99A4 !important;
+transition: .05s all ease-in-out;
+
+}
 .big-btn {}
 
 
@@ -913,8 +942,8 @@ display: block;
 }
 
 .ball-1 {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   background-image: url('../img/svg/blink.svg');
   position: absolute;
   display: block;
@@ -1272,7 +1301,17 @@ display: block;
     display: none;
   }
 
+.subs__items, .functional__items {
+  position: relative;
+  z-index: 999999999999;
+}
+.main__btn a, .test__btn a {
+  justify-content: center !important;
+}
 
+.functional__item {
+  z-index: 9999999999;
+}
   .sub__item-btn {
     font-family: RF Dewi Extended;
     font-size: 16px;
