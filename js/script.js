@@ -94,20 +94,41 @@ document.addEventListener('DOMContentLoaded', function () {
   translateContent(language);
 });
 
-// Получить значение параметра из URL
 function getParameterByName(name) {
-  var url = window.location.href;
-  var regex = new RegExp(`[?&]${name}=([^&#]*)`);
-  var results = regex.exec(url);
+  const url = window.location.href;
+  const regex = new RegExp(`[?&]${name}=([^&#]*)`);
+  const results = regex.exec(url);
   return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
 
 const commentValue = getParameterByName('comment');
+const element = document.getElementById('dynamic');
+const originalText = element.textContent;
+const text = commentValue || originalText;
+let index = text.length;
 
-if (commentValue) {
-  document.getElementById('dynamic').textContent = commentValue;
-}
+// Function to erase text
+const eraseText = () => {
+  if (index >= 0) {
+      element.textContent = text.substring(0, index);
+      index--;
+      setTimeout(eraseText, 50);
+  } else {
+      setTimeout(() => typeText(commentValue || originalText), 100);
+  }
+};
 
+// Function to type text
+const typeText = (newText) => {
+  if (index < newText.length) {
+      element.textContent = newText.substring(0, index + 1);
+      index++;
+      setTimeout(() => typeText(newText), 100);
+  }
+};
+
+// Start by erasing the text
+eraseText();
 
 document.addEventListener("DOMContentLoaded", function () {
   const navItems = document.querySelectorAll('.header__item');
@@ -145,3 +166,4 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(section);
   });
 });
+

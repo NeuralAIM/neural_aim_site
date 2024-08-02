@@ -1421,7 +1421,9 @@ display: block;
   .test__video-wrapper {
     display: block;
   }
-
+.test__btn {
+  display: none;
+}
   .test__info {
     z-index: 99999988889;
     position: relative;
