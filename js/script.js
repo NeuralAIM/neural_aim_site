@@ -71,12 +71,17 @@ document.addEventListener('DOMContentLoaded', function () {
   
   var currentLanguage = getLanguage();
 
-  document.getElementById('language-toggle').addEventListener('click', function () {
-    currentLanguage = currentLanguage === 'ru' ? 'en' : 'ru';
-    translateContent(currentLanguage);
-    var btnTitle = document.querySelector('.header__btn-title');
-    btnTitle.textContent = currentLanguage === 'ru' ? 'English' : 'Русский';
-  });
+document.getElementById('language-toggle').addEventListener('click', function () {
+  currentLanguage = currentLanguage === 'ru' ? 'en' : 'ru';
+  translateContent(currentLanguage);
+  var btnTitle = document.querySelector('.header__btn-title');
+  btnTitle.textContent = currentLanguage === 'ru' ? 'English' : 'Русский';
+  
+  // Обновить текст при смене языка
+  index = 0; // Сбросить индекс
+  element.textContent = ''; // Очистить текст
+  eraseText(); // Начать печатать новый текст
+});
 
   // Перевести контент страницы на выбранный язык
   function translateContent(language) {
@@ -107,28 +112,41 @@ const originalText = element.textContent;
 const text = commentValue || originalText;
 let index = text.length;
 
-// Function to erase text
-const eraseText = () => {
-  if (index >= 0) {
-      element.textContent = text.substring(0, index);
-      index--;
-      setTimeout(eraseText, 50);
-  } else {
-      setTimeout(() => typeText(commentValue || originalText), 100);
-  }
-};
+// Проверка на наличие commentValue
+if (!commentValue) {
+  const games = ['Valorant', 'Counter Strike 2', 'Fortnite', "Apex", "Stalcraft", "Rainbow Six Siege"]; // Массив игр
+  let gameIndex = 0; // Индекс текущей игры
 
-// Function to type text
-const typeText = (newText) => {
-  if (index < newText.length) {
-      element.textContent = newText.substring(0, index + 1);
-      index++;
-      setTimeout(() => typeText(newText), 100);
-  }
-};
+  // Обновить функцию eraseText для работы с массивом игр
+  const eraseText = () => {
+    if (index >= 0) {
+        element.textContent = games[gameIndex].substring(0, index);
+        index--;
+        setTimeout(eraseText, 50);
+    } else {
+        gameIndex = (gameIndex + 1) % games.length; // Перейти к следующей игре
+        setTimeout(() => typeText(games[gameIndex]), 100);
+    }
+  };
 
-// Start by erasing the text
-eraseText();
+  // Обновить функцию typeText для работы с массивом игр
+  const typeText = (newText) => {
+    if (index < newText.length) {
+        element.textContent = newText.substring(0, index + 1);
+        index++;
+        setTimeout(() => typeText(newText), 100);
+    } else {
+        setTimeout(eraseText, 1000); // Задержка перед удалением
+    }
+  };
+
+  // Начать с первой игры
+  eraseText();
+} else {
+  // Если commentValue указан, просто отобразить его
+  element.textContent = text;
+}
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const navItems = document.querySelectorAll('.header__item');
