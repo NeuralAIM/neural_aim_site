@@ -1,17 +1,30 @@
-// Получить текущий язык из URL
 function getLanguage() {
-  var search = window.location.search;
-  if (search === '?lang=en') {
-    return 'en';
-  } else if (search === '?lang=ru') {
+  // Получаем предпочитаемый язык браузера
+  const browserLang = (navigator.language || navigator.userLanguage).toLowerCase();
+  
+  // Массив языковых кодов для русскоговорящих стран (СНГ и близлежащих регионов)
+  const ruLanguages = [
+    'ru', // Россия
+    'be', // Беларусь
+    'uk', // Украина
+    'kk', // Казахстан
+    'ky', // Кыргызстан
+    'uz', // Узбекистан
+    'tg', // Таджикистан
+    'tk', // Туркменистан
+    'hy', // Армения
+    'az', // Азербайджан
+    'mo', // Молдова
+    'ka'  // Грузия
+  ];
+  
+  // Проверяем, начинается ли язык браузера с любого из указанных кодов
+  if (ruLanguages.some(lang => browserLang.startsWith(lang))) {
     return 'ru';
   } else {
-    return 'ru'; // язык по умолчанию
+    return 'en';
   }
 }
-
-
-console.log(getLanguage());
 
 // Добавить возможность переключения языка при клике на кнопку
 document.addEventListener('DOMContentLoaded', function () {
