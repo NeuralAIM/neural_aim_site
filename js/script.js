@@ -110,6 +110,34 @@ document.getElementById('language-toggle').addEventListener('click', function ()
   // Вызвать функцию перевода контента при загрузке страницы
   var language = getLanguage();
   translateContent(language);
+
+  // --- Scroll Animation Observer ---
+  const animatedElements = document.querySelectorAll('.functional__item, .subs__item, .accordion-item');
+
+  if (animatedElements.length > 0) {
+    const observerOptions = {
+      root: null, // relative to document viewport
+      rootMargin: '0px',
+      threshold: 0.1 // Trigger when 10% of the element is visible
+    };
+
+    const animationObserverCallback = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target); // Stop observing once visible
+        }
+      });
+    };
+
+    const animationObserver = new IntersectionObserver(animationObserverCallback, observerOptions);
+
+    animatedElements.forEach(el => {
+      animationObserver.observe(el);
+    });
+  }
+  // --- End Scroll Animation Observer ---
+
 });
 
 function getParameterByName(name) {

@@ -149,6 +149,7 @@ body {
 
 html {
   overflow-x: hidden;
+  overflow-y: scroll; /* Always show vertical scrollbar to prevent layout shift */
   scroll-behavior: smooth;
 }
 
@@ -482,6 +483,8 @@ display: block;
 .functional {
   position: relative;
   padding-top: 128px;
+  width: 100%; /* Explicitly set width */
+  overflow: hidden; /* Prevent absolutely positioned children from causing overflow */
 }
 
 .functional__title {
@@ -939,8 +942,11 @@ display: block;
 
 .quest {
   position: relative;
+  width: 100%; /* Explicitly set width */
+  overflow: hidden; /* Prevent absolutely positioned children from causing overflow */
 }
 
+/*
 .ball-1 {
   width: 150px;
   height: 150px;
@@ -952,9 +958,11 @@ display: block;
   background-repeat: no-repeat;
   background-size: contain;
   animation: blink 3s infinite ease-in-out;
-  /* Интенсивное красное свечение */
+  /* Интенсивное красное свечение * /
 }
+*/
 
+/*
 .ball-2 {
   width: 400px;
   height: 500px;
@@ -966,9 +974,11 @@ display: block;
   background-repeat: no-repeat;
   background-size: contain;
   animation: blink 3s infinite ease-in-out;
-  /* Интенсивное красное свечение */
+  /* Интенсивное красное свечение * /
 }
+*/
 
+/*
 .ball-3 {
   width: 400px;
   height: 500px;
@@ -980,9 +990,11 @@ display: block;
   background-repeat: no-repeat;
   background-size: contain;
   animation: blink 3s infinite ease-in-out;
-  /* Интенсивное красное свечение */
+  /* Интенсивное красное свечение * /
 }
+*/
 
+/*
 .ball-5 {
   width: 200px;
   height: 200px;
@@ -994,14 +1006,16 @@ display: block;
   background-repeat: no-repeat;
   background-size: contain;
   animation: blink 3s infinite ease-in-out;
-  /* Интенсивное красное свечение */
+  /* Интенсивное красное свечение * /
 }
+*/
 
 .accordion {
   z-index: 99999;
   position: relative;
 }
 
+/*
 .ball-4 {
   width: 200px;
   height: 200px;
@@ -1013,9 +1027,11 @@ display: block;
   background-repeat: no-repeat;
   background-size: contain;
   animation: blink 3s infinite ease-in-out;
-  /* Интенсивное красное свечение */
+  /* Интенсивное красное свечение * /
 }
+*/
 
+/*
 @keyframes blink {
 
   0%,
@@ -1027,6 +1043,7 @@ display: block;
     scale: 1.3;
   }
 }
+*/
 
 .privacy {
   padding-top: 250px;
@@ -1457,3 +1474,36 @@ display: block;
     text-align: center;
   }
 }
+
+/* Scroll Animation Styles */
+/* Base state for elements to be animated */
+.functional__item,
+.subs__item,
+.accordion-item {
+  opacity: 0;
+  /* Combine transitions: scroll effect + existing hover/other effects */
+  transition: opacity 0.6s ease-out, background 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  will-change: opacity; /* Optimize performance */
+}
+
+/* Visible state triggered by JavaScript */
+.functional__item.is-visible,
+.subs__item.is-visible,
+.accordion-item.is-visible {
+  opacity: 1;
+}
+
+/* Optional: Add slight delay for items in a grid/list for a staggered effect */
+.functional__items .functional__item.is-visible:nth-child(2) { transition-delay: 0.1s; }
+.functional__items .functional__item.is-visible:nth-child(3) { transition-delay: 0.2s; }
+.functional__items .functional__item.is-visible:nth-child(4) { transition-delay: 0.0s; } /* Reset delay for next row if applicable */
+.functional__items .functional__item.is-visible:nth-child(5) { transition-delay: 0.1s; }
+.functional__items .functional__item.is-visible:nth-child(6) { transition-delay: 0.2s; }
+
+.subs__items .subs__item.is-visible:nth-child(2) { transition-delay: 0.1s; }
+.subs__items .subs__item.is-visible:nth-child(3) { transition-delay: 0.2s; }
+
+.accordion .accordion-item.is-visible:nth-child(2) { transition-delay: 0.1s; }
+.accordion .accordion-item.is-visible:nth-child(3) { transition-delay: 0.2s; }
+.accordion .accordion-item.is-visible:nth-child(4) { transition-delay: 0.3s; }
+.accordion .accordion-item.is-visible:nth-child(5) { transition-delay: 0.4s; }
