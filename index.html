@@ -1,447 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (() => {
+        const redirectedPath = window.sessionStorage.getItem("naim-spa-redirect");
+        if (!redirectedPath) {
+          return;
+        }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NAIM - Нейросеть для игр</title>
-  <meta name="description" content="NAIM это чит на базе нейросети для всех игр! Используйте потенциал нейросетей чтобы побеждать!">
-  <meta name="keywords" content="NAIM, Нейросеть, аимбот, Чит, нейронка, игры">
-  <link rel="shortcut icon" href="img/image.avif" type="image/x-icon">
-  <link rel="stylesheet" href="css/null.css">
-  <link rel="preload" href="NAIM.mp4" as="video" type="video/mp4">
-  <link rel="stylesheet" href="css/style.css">
-</head>
+        window.sessionStorage.removeItem("naim-spa-redirect");
+        const currentLocation = `${window.location.pathname}${window.location.search}${window.location.hash}`;
 
-<body>
-  <div class="hero">
-    <video autoplay muted loop class="hero__video">
-      <source src="./NAIM.mp4" type="video/mp4" poster="img/main.png">
-      Your browser does not support the video tag.
-    </video>
-    <header class="header">
-      <div class="container">
-        <div class="header__row">
-          <a href="/">
-            <img src="img/svg/logo.svg" alt="" class="header__logo">
-          </a>
-          <div class="header__list">
-            <a href="#main"  class="header__item" data-ru="Главная" data-en="Home">Главная</a>
-            <a href="#functional" class="header__item" data-ru="Функционал" data-en="Features">Функционал</a>
-            <a href="#subs" class="header__item" data-ru="Подписки" data-en="Subscriptions">Подписки</a>
-            <a href="#quest" class="header__item" data-ru="Вопросы" data-en="FAQ">Вопросы</a>
-            <a href="#test" class="header__item" data-ru="Контакты" data-en="Contacts">Контакты</a>
-          </div>
-          <button class="header__btn btn-mini" id="language-toggle">
-            <div class="header__img">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M21 11C21 16.5228 16.5228 21 11 21M21 11C21 5.47715 16.5228 1 11 1M21 11C21 9.34315 16.5228 8 11 8C5.47715 8 1 9.34315 1 11M21 11C21 12.6569 16.5228 14 11 14C5.47715 14 1 12.6569 1 11M11 21C5.47715 21 1 16.5228 1 11M11 21C13.2091 21 15 16.5228 15 11C15 5.47715 13.2091 1 11 1M11 21C8.79086 21 7 16.5228 7 11C7 5.47715 8.79086 1 11 1M1 11C1 5.47715 5.47715 1 11 1"
-                  stroke="#FF1E46" stroke-width="1.5" />
-              </svg>
-            </div>
-            <span class="header__btn-title">English</span>
-          </button>
-        </div>
-      </div>
-    </header>
-    <section class="main" id="main">
-      <div class="container">
-        <div class="main__title">
-          <p style="display: inline;" data-ru="Нейросеть <br> для" data-en="Neural Network <br> for ">
-            Нейросеть <br> для
-          </p>
-          <span class="red" data-ru="всех игр" data-en="all games" id="dynamic">всех игр</span>
-        </div>
-        <div class="main__info">
-          <button class="main__btn btn-big">
-            <a href="https://disk.yandex.ru/d/rRqRc21uir-BQw" target="_blank" class="" data-ru="Установить" data-en="Install">
-            Установить
-            </a>
-          </button>
-          <button class="main__btn btn-big main__btn-m">
-            <a href="https://t.me/s/neuralaim" target="_blank" class="" data-ru="Обсудить" data-en="Discuss">
-            Обсудить
-            </a>
-          </button>
-          
-          <p class="main__description"
-            data-ru='При нажатии на кнопку “Установить”, вы соглашаетесь с <a href="privacy.html">пользовательским соглашением</a>'
-            data-en='By clicking the “Install” button, you agree to the <a href="privacy.html">user agreement</a>'>
-            При нажатии на кнопку “Установить”, вы соглашаетесь с <a href="privacy.html">пользовательским
-              соглашением</a>
-          </p>
-          <p class="main__description main__description-m"
-            data-ru="Посетите этот сайт с вашего компьютера, для скачивания NAIM"
-            data-en="Visit this site from your computer to download NAIM">
-            Посетите этот сайт с вашего компьютера, для скачивания NAIM
-          </p>
-        </div>
-      </div>
-    </section>
+        if (redirectedPath !== currentLocation) {
+          window.history.replaceState(null, "", redirectedPath);
+        }
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+      })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108396053', 'ym');
 
-  </div>
-  <section class="functional" id="functional">
-    <div class="container">
-      <span class="functional__title title" >
-        
-        <span data-ru="Функционал" data-en="Features">Функционал</span>
-        <div class="ball ball-1" id="ball"></div>
-      </span>
-      <div class="functional__items">
-        <div class="functional__item">
-          <span class="functional__item-bage">FREE</span>
-          <img src="img/svg/01.svg" alt="" class="functional__img">
-          <span class="functional__title" data-ru="AIM + RCS" data-en="AIM + RCS">AIM + RCS</span>
-          <p class="functional__description"
-            data-ru="Самые передовые алогритмы работы, для высокой точности и скорости наводки."
-            data-en="The most advanced algorithms for high precision and targeting speed.">Самые передовые алогритмы
-            работы, для высокой точности и скорости наводки.</p>
-        </div>
-        <div class="functional__item">
-          <span class="functional__item-bage">FREE</span>
-          <img src="img/svg/02.svg" alt="" class="functional__img">
-          <span class="functional__title" data-ru="Visuals" data-en="Visuals">Visuals</span>
-          <p class="functional__description"
-            data-ru="Играйте как одно целое с NAIM, вы видите всё - что видит нейросеть."
-            data-en="Play as one with NAIM, you see everything the neural network sees.">Играйте как одно целое с NAIM,
-            вы видите всё - что видит нейросеть.</p>
-        </div>
-        <div class="functional__item">
-          <span class="functional__item-bage">PRO</span>
-          <img src="img/svg/03.svg" alt="" class="functional__img">
-          <span class="functional__title" data-ru="Neural" data-en="Neural">Neural</span>
-          <p class="functional__description"
-            data-ru="Настройте нейросеть так, как играете сами! У нас лучшие модели AI."
-            data-en="Customize the neural network to play as you do! We have the best AI models.">Настройте нейросеть
-            так, как играете сами! У нас лучшие модели AI.</p>
-        </div>
-        <div class="functional__item">
-          <span class="functional__item-bage">PRO</span>
-          <img src="img/svg/04.svg" alt="" class="functional__img">
-          <span class="functional__title" data-ru="AimAssist" data-en="AimAssist">AimAssist</span>
-          <p class="functional__description" data-ru="Установите срабатывания AIM’а на любые клавиши клавиатуры и мыши!"
-            data-en="Set AIM activation on any keyboard and mouse buttons!">Установите срабатывания AIM’а на любые
-            клавиши клавиатуры и мыши!</p>
-        </div>
-        <div class="functional__item">
-          <span class="functional__item-bage">PRO</span>
-          <img src="img/svg/05.svg" alt="" class="functional__img">
-          <span class="functional__title" data-ru="AutoFire" data-en="AutoFire">AutoFire</span>
-          <p class="functional__description"
-            data-ru="Стреляйте во врагов быстро, и точно.Настраивайте скорость стрельбы как вам удобно!"
-            data-en="Shoot enemies quickly and accurately. Adjust the firing speed as you like!">Стреляйте во врагов
-            быстро, и точно.Настраивайте скорость стрельбы как вам удобно!</p>
-        </div>
-        <div class="functional__item">
-          <span class="functional__item-bage functional__item-bage-custom">PRO</span>
-          <img src="img/svg/06.svg" alt="" class="functional__img">
-          <span class="functional__title" data-ru="Other" data-en="Other">Other</span>
-          <p class="functional__description"
-            data-ru="Начиная от разрешения экрана, до видимости меню, всё чтобы тебе было приятно играть!"
-            data-en="From screen resolution to menu visibility, everything to make your gameplay enjoyable!">
-            Начиная от разрешения экрана, до видимости меню, всё чтобы тебе было приятно играть!
-          </p>
-        </div>
-        <div class="ball ball-2" id="ball"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="subs" id="subs">
-    <div class="subs__video-wrapper">
-      <video autoplay muted loop class="subs__video">
-        <source src="./NAIM.mp4" type="video/mp4" poster="img/main.png">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <div class="container">
-      <span class="subs__title title" data-ru="Подписки" data-en="Subscriptions">Подписки</span>
-      <div class="subs__items">
-        <div class="subs__item">
-          <div class="subs__item-text">
-            <span class="subs__item-title" data-ru="Level 1" data-en="Level 1">Level 1</span>
-            <p class="subs__item-description"
-              data-ru="Ограниченный пробный доступ<br> Работает только во время стрельбы"
-              data-en="Limited trial access<br> Works only during shooting">
-              Ограниченный пробный доступ<br> Работает только во время стрельбы
-            </p>
-          </div>
-          <button class="sub__item-btn btn-big">
-
-            <a href="https://disk.yandex.ru/d/rRqRc21uir-BQw" target="_blank" class="" data-ru="Установить" data-en="Install">Установить</a>
-          </button>
-        </div>
-        <div class="subs__item">
-          <div class="subs__item-text">
-            <span class="subs__item-title" data-ru="Level 2" data-en="Level 2">Level 2</span>
-            <p class="subs__item-description"
-              data-ru='Доступ ко всем функциям 
-              <svg width="86" height="30" viewBox="0 0 86 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="1" y="0.5" width="84" height="29" rx="7" stroke="#50505D"/>
-                <path d="M24.2803 7H28.2266L25.8842 21.7541H18.899L16.3667 9.65574L14.4463 21.7541H10.5L12.8424 7H19.8276L22.36 19.1194L24.2803 7ZM46.6267 21.7541L48.9692 7H53.1266L50.784 21.7541H46.6267ZM68.0571 7H75.2954L72.9319 21.7541H68.9856L70.9271 9.5082L65.7779 21.7541H60.1856L58.9194 9.46604L56.9779 21.7541H53.0317L55.3741 7H62.5703L63.3933 19.1827L68.0571 7Z" fill="#50505D"/>
-                <path d="M31.9353 21.7541H27.7358L35.4807 7H41.7061L44.7871 21.7541H40.5665H31.9353Z" fill="#50505D"/>
-                </svg>
-                
-              <br> Создавайте скрипты NAPI'
-              data-en='Access to all features 
-              
-              <svg width="86" height="30" viewBox="0 0 86 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="1" y="0.5" width="84" height="29" rx="7" stroke="#50505D"/>
-                <path d="M24.2803 7H28.2266L25.8842 21.7541H18.899L16.3667 9.65574L14.4463 21.7541H10.5L12.8424 7H19.8276L22.36 19.1194L24.2803 7ZM46.6267 21.7541L48.9692 7H53.1266L50.784 21.7541H46.6267ZM68.0571 7H75.2954L72.9319 21.7541H68.9856L70.9271 9.5082L65.7779 21.7541H60.1856L58.9194 9.46604L56.9779 21.7541H53.0317L55.3741 7H62.5703L63.3933 19.1827L68.0571 7Z" fill="#50505D"/>
-                <path d="M31.9353 21.7541H27.7358L35.4807 7H41.7061L44.7871 21.7541H40.5665H31.9353Z" fill="#50505D"/>
-                </svg>
-                
-              <br> Create NAPI scripts'>
-              Доступ ко всем функциям 
-              
-              
-              <svg width="86" height="30" viewBox="0 0 86 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="1" y="0.5" width="84" height="29" rx="7" stroke="#50505D"/>
-                <path d="M24.2803 7H28.2266L25.8842 21.7541H18.899L16.3667 9.65574L14.4463 21.7541H10.5L12.8424 7H19.8276L22.36 19.1194L24.2803 7ZM46.6267 21.7541L48.9692 7H53.1266L50.784 21.7541H46.6267ZM68.0571 7H75.2954L72.9319 21.7541H68.9856L70.9271 9.5082L65.7779 21.7541H60.1856L58.9194 9.46604L56.9779 21.7541H53.0317L55.3741 7H62.5703L63.3933 19.1827L68.0571 7Z" fill="#50505D"/>
-                <path d="M31.9353 21.7541H27.7358L35.4807 7H41.7061L44.7871 21.7541H40.5665H31.9353Z" fill="#50505D"/>
-                </svg>
-                
-              <br> Создавайте скрипты NAPI
-            </p>
-          </div>
-          <div class="sub__item-btn btn-big">
-            <a href="https://t.me/neuralaim" target="_blank" class="">
-              <span data-ru="Приобрести" data-en="Purchase">Приобрести</span>
-              <span>899Р</span>
-            </a>
-          </div>
-      
-        </div>
-        <div class="subs__item">
-          <div class="subs__item-text">
-            <span class="subs__item-title" data-ru="Level 3" data-en="Level 3">Level 3</span>
-            <p class="subs__item-description"
-              data-ru='Доступ ко всем функциям<svg width="86" height="30" viewBox="0 0 86 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="1" y="0.5" width="84" height="29" rx="7" stroke="#50505D"/>
-                <path d="M24.2803 7H28.2266L25.8842 21.7541H18.899L16.3667 9.65574L14.4463 21.7541H10.5L12.8424 7H19.8276L22.36 19.1194L24.2803 7ZM46.6267 21.7541L48.9692 7H53.1266L50.784 21.7541H46.6267ZM68.0571 7H75.2954L72.9319 21.7541H68.9856L70.9271 9.5082L65.7779 21.7541H60.1856L58.9194 9.46604L56.9779 21.7541H53.0317L55.3741 7H62.5703L63.3933 19.1827L68.0571 7Z" fill="#50505D"/>
-                <path d="M31.9353 21.7541H27.7358L35.4807 7H41.7061L44.7871 21.7541H40.5665H31.9353Z" fill="#50505D"/>
-                </svg>
-                <br> Аппаратный обход всех античитов'
-              data-en='Access to all functions <svg width="86" height="30" viewBox="0 0 86 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="1" y="0.5" width="84" height="29" rx="7" stroke="#50505D"/>
-                <path d="M24.2803 7H28.2266L25.8842 21.7541H18.899L16.3667 9.65574L14.4463 21.7541H10.5L12.8424 7H19.8276L22.36 19.1194L24.2803 7ZM46.6267 21.7541L48.9692 7H53.1266L50.784 21.7541H46.6267ZM68.0571 7H75.2954L72.9319 21.7541H68.9856L70.9271 9.5082L65.7779 21.7541H60.1856L58.9194 9.46604L56.9779 21.7541H53.0317L55.3741 7H62.5703L63.3933 19.1827L68.0571 7Z" fill="#50505D"/>
-                <path d="M31.9353 21.7541H27.7358L35.4807 7H41.7061L44.7871 21.7541H40.5665H31.9353Z" fill="#50505D"/>
-                </svg>
-                <br> Hardware bypass of all anti-cheats'>
-              Доступ ко всем функциям <img src="img/svg/NAIM.svg" alt=""><br> Аппаратный обход всех античитов
-            </p>
-          </div>
-          <button class="sub__item-btn btn-big">
-            <a href="https://t.me/neuralaim" target="_blank" class="">
-              <span data-ru="Приобрести" data-en="Purchase">Приобрести</span>
-              <span>1999Р</span>
-            </a>
-          </button>
-     
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="quest" id="quest">
-    <div class="container">
-      <span class="quest__title title" data-ru="Вопросы" data-en="Questions">Вопросы</span>
-
-      <div class="ball ball-3" id="ball"></div>
-      <div class="accordion">
-        <div class="accordion-item">
-          <button class="accordion-header">
-            <span data-ru="Какие ограничения у бесплатной версии?"
-              data-en="What are the limitations of the free version?">Какие ограничения у бесплатной версии?</span>
-            <span class="arrow">
-              <svg width="15" height="7" viewBox="0 0 15 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M0.750714 0.517278C1.06338 0.126446 1.63368 0.0630801 2.02451 0.375745L7.50004 4.75617L12.9756 0.375745C13.3664 0.0630801 13.9367 0.126446 14.2494 0.517278C14.562 0.908109 14.4987 1.4784 14.1078 1.79107L8.06617 6.6244C7.73519 6.88919 7.26489 6.88919 6.93391 6.6244L0.892247 1.79107C0.501416 1.4784 0.43805 0.908109 0.750714 0.517278Z"
-                  fill="#50505D" />
-              </svg>
-            </span>
-          </button>
-          <div class="accordion-content">
-            <p data-ru="В бесплатной версии, принудительно включен AIMAssist, то есть весь функционал работает только во время стрельбы. Если хочеться настроить его на постоянной основе, или забиндить наводку на любую клавишу мыши/клавиатуры, требуется уровень 2 или выше. Также есть строгие ограничения по множеству другим функциям, в том числе и по безопасности использования с некоторыми античитами."
-              data-en="In the free version, AIMAssist is forced on, meaning all functionality works only during shooting. If you want to configure it permanently or bind targeting to any keyboard/mouse key, level 2 or higher is required. There are also strict limitations on many other functions, including security issues with some anti-cheat systems.">
-              В бесплатной версии, принудительно включен AIMAssist, то есть весь функционал работает только во время
-              стрельбы. Если хочеться настроить его на постоянной основе, или забиндить наводку на любую клавишу
-              мыши/клавиатуры, требуется уровень 2 или выше. Также есть строгие ограничения по множеству другим
-              функциям, в том числе и по безопасности использования с некоторыми античитами.</p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-header">
-            <span data-ru="Я могу писать свои скрипты для NAIM?" data-en="Can I write my own scripts for NAIM?">Я могу
-              писать свои скрипты для NAIM?</span>
-            <span class="arrow">
-              <svg width="15" height="7" viewBox="0 0 15 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M0.750714 0.517278C1.06338 0.126446 1.63368 0.0630801 2.02451 0.375745L7.50004 4.75617L12.9756 0.375745C13.3664 0.0630801 13.9367 0.126446 14.2494 0.517278C14.562 0.908109 14.4987 1.4784 14.1078 1.79107L8.06617 6.6244C7.73519 6.88919 7.26489 6.88919 6.93391 6.6244L0.892247 1.79107C0.501416 1.4784 0.43805 0.908109 0.750714 0.517278Z"
-                  fill="#50505D" />
-              </svg>
-            </span>
-          </button>
-          <div class="accordion-content">
-            <p data-ru="У нас есть NAPI (NeuralAPI), который позволяет взаимодействовать с нейросетью и множеством обходов а также со всем внутренним функционалом NAIM. Использование таких скриптов доступно всем, но их создание только со 2го уровня. Всю документацию можно найти здесь: docs.neuralaim.ru"
-              data-en="We have NAPI (NeuralAPI), which allows interaction with the neural network and various bypasses, as well as all internal NAIM functionality. The use of such scripts is available to everyone, but their creation is only available from level 2. All documentation can be found here: docs.neuralaim.ru">
-              У нас есть NAPI (NeuralAPI), который позволяет взаимодействовать с нейросетью и множеством обходов а
-              также со всем внутренним функционалом NAIM. Использование таких скриптов доступно всем, но их создание
-              только со 2го уровня. Всю документацию можно найти здесь: <a href="https://docs.neuralaim.ru"
-                target="_blank">docs.neuralaim.ru</a></p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-header">
-            <span data-ru="Какие видеокарты поддерживает?" data-en="What graphics cards are supported?">Какие видеокарты
-              поддерживает?</span>
-            <span class="arrow">
-              <svg width="15" height="7" viewBox="0 0 15 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M0.750714 0.517278C1.06338 0.126446 1.63368 0.0630801 2.02451 0.375745L7.50004 4.75617L12.9756 0.375745C13.3664 0.0630801 13.9367 0.126446 14.2494 0.517278C14.562 0.908109 14.4987 1.4784 14.1078 1.79107L8.06617 6.6244C7.73519 6.88919 7.26489 6.88919 6.93391 6.6244L0.892247 1.79107C0.501416 1.4784 0.43805 0.908109 0.750714 0.517278Z"
-                  fill="#50505D" />
-              </svg>
-            </span>
-          </button>
-          <div class="accordion-content">
-            <p data-ru="Мы поддерживаем AMD/NVidia/Intel - видеокарты, как правило не старше 12 лет. В случае если видеокарта не подходит, то NAIM будет использовать вашу встроенную видеокарту или на крайний случай - процессор. Помни, что мы поддерживаем windows 8 и новее!"
-              data-en="We support AMD/NVidia/Intel graphics cards, generally no older than 12 years. If the graphics card is not suitable, NAIM will use your integrated graphics card or, as a last resort, the CPU. Remember, we support Windows 8 and newer!">
-              Мы поддерживаем AMD/NVidia/Intel - видеокарты, как правило не старше 12 лет. В случае если видеокарта не
-              подходит, то NAIM будет использовать вашу встроенную видеокарту или на крайний случай - процессор. Помни,
-              что мы поддерживаем Windows 8 и новее!</p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-header">
-            <span data-ru="Сложно ли устанавливать его?" data-en="Is it difficult to install?"> Сложно ли устанавливать
-              его?</span>
-            <span class="arrow">
-              <svg width="15" height="7" viewBox="0 0 15 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M0.750714 0.517278C1.06338 0.126446 1.63368 0.0630801 2.02451 0.375745L7.50004 4.75617L12.9756 0.375745C13.3664 0.0630801 13.9367 0.126446 14.2494 0.517278C14.562 0.908109 14.4987 1.4784 14.1078 1.79107L8.06617 6.6244C7.73519 6.88919 7.26489 6.88919 6.93391 6.6244L0.892247 1.79107C0.501416 1.4784 0.43805 0.908109 0.750714 0.517278Z"
-                  fill="#50505D" />
-              </svg>
-            </span>
-          </button>
-          <div class="accordion-content">
-            <p data-ru="Нет, у нас даже нет установщика, вы просто запускаете - и играете. Никаких долгих и сложных установок. Всё что от вас требуется, это создать бесплатный аккаунт при первом запуске. Вес файла менее 100мб, начните играть прямо сейчас!"
-              data-en="No, we don't even have an installer; you just run it - and play. No long and complicated installations. All you need to do is create a free account on first launch. The file size is less than 100MB, so start playing right now!">
-              Нет, у нас даже нет установщика, вы просто запускаете - и играете. Никаких долгих и сложных установок.
-              Всё что от вас требуется, это создать бесплатный аккаунт при первом запуске. Вес файла менее 100мб,
-              начните играть прямо сейчас!</p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-header">
-            <span data-ru="Как работает NAIM?" data-en="How does NAIM work?">Как работает NAIM?</span>
-            <span class="arrow">
-              <svg width="15" height="7" viewBox="0 0 15 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M0.750714 0.517278C1.06338 0.126446 1.63368 0.0630801 2.02451 0.375745L7.50004 4.75617L12.9756 0.375745C13.3664 0.0630801 13.9367 0.126446 14.2494 0.517278C14.562 0.908109 14.4987 1.4784 14.1078 1.79107L8.06617 6.6244C7.73519 6.88919 7.26489 6.88919 6.93391 6.6244L0.892247 1.79107C0.501416 1.4784 0.43805 0.908109 0.750714 0.517278Z"
-                  fill="#50505D" />
-              </svg>
-            </span>
-          </button>
-          <div class="accordion-content">
-            <p data-ru="NAIM работает на базе нейросети. Он анализирует изображение с экрана, и двигает мышь как обычный человек, при обнаружении врага. Он будет работать даже с облачными сервисами, т.к. не внедряется в игру  не требует установленной игры на вашем ПК. Вы также можете настроить автовыстрел, и множество других полезных функций!"
-              data-en="NAIM operates based on a neural network. It analyzes the screen image and moves the mouse like a normal person when detecting an enemy. It will work even with cloud services as it does not interfere with the game  does not require the game to be installed on your PC. You can also set up auto-shooting and many other useful features!">
-              NAIM работает на базе нейросети. Он анализирует изображение с экрана, и двигает мышь как обычный человек,
-              при обнаружении врага. Он будет работать даже с облачными сервисами, т.к. не внедряется в игру не требует
-              установленной игры на вашем ПК. Вы также можете настроить автовыстрел, и множество других полезных
-              функций!
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="ball ball-4" id="ball"></div>
-    </div>
-  </section>
-
-  <section class="test" id="test">
-    <div class="test__video-wrapper">
-      <video autoplay muted loop class="test__video" poster="img/main.png">
-        <source src="./NAIM.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <div class="container">
-      <div class="test__info">
-        <span class="test__title title" data-ru="Попробуй прямо сейчас" data-en="Try it now">Попробуй прямо
-          сейчас</span>
-        <p class="test__subtitle"
-          data-ru="Попробуй будущее, уже - сегодня!<br>Никаких сложных установок, запустил и играешь!"
-          data-en="Try the future today!<br>No complicated installations, just launch and play!">
-          Попробуй будущее, уже - сегодня!
-          <br>
-          Никаких сложных установок, запустил и играешь!
-        </p>
-        <button class="test__btn btn-big">
-
-          <a href="https://disk.yandex.ru/d/rRqRc21uir-BQw" target="_blank" class="" data-ru="Установить" data-en="Install">Установить</a>
-        </button>
-        <button class="main__btn btn-big main__btn-m">
-          <a href="https://t.me/s/neuralaim" target="_blank" class="" data-ru="Обсудить" data-en="Discuss">
-          Обсудить
-          </a>
-        </button>
-        <span class="test__policy"
-          data-ru="При нажатии на кнопку “Установить”, вы соглашаетесь с <a href='privacy.html'>пользовательским соглашением</a>"
-          data-en="By clicking the 'Install' button, you agree to the <a href='privacy.html'>terms of service</a>">
-          При нажатии на кнопку “Установить”, вы соглашаетесь с <a href="privacy.html">пользовательским соглашением</a>
-        </span>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer" id="footer">
-    <div class="container">
-      <span class="footer__title">
-<div style="text-align: center; padding: 10px 0;">
-  </div>
-        NAIM © 2026
-      </span>
-      <div style="display: block; text-align: center; margin: 10px 0 5px 0;">
-        <a href="https://yougame.biz" target="_blank" rel="noopener noreferrer" style="color: #0D0D0D; text-decoration: none; font-size: 1em;">YOUGAME</a>
-      </div>
-
-      <div class="footer__social">
-        <a href="https://vk.com/neuralaim_vk" class="footer__social-item">
-
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M25.4612 33.8608C15.0808 33.8608 9.16004 26.7444 8.91333 14.9028H14.113C14.2838 23.5942 18.1171 27.2757 21.1533 28.0348V14.9028H26.0496V22.3986C29.0479 22.0761 32.1977 18.6603 33.2604 14.9028H38.1566C37.3406 19.5332 33.9247 22.949 31.4957 24.3533C33.9247 25.4919 37.8152 28.4713 39.2954 33.8608H33.9058C32.7482 30.2551 29.8639 27.4655 26.0496 27.086V33.8608H25.4612Z"
-              fill="url(#paint0_linear_32_208)" />
-          </svg>
-
-
-
-        </a>
-        <a href="https://t.me/neuralaim" class="footer__social-item">
-
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M9.54573 23.4539C17.4555 20.0188 22.7211 17.7363 25.3652 16.6289C32.8908 13.4876 34.4728 12.9452 35.4897 12.9226C35.7157 12.9226 36.2129 12.9678 36.5519 13.239C36.8231 13.465 36.8909 13.7588 36.9361 13.9848C36.9813 14.2108 37.0265 14.6854 36.9813 15.0469C36.5745 19.3408 34.8117 29.7591 33.9078 34.5501C33.5236 36.5841 32.7778 37.2621 32.0546 37.3298C30.4727 37.4654 29.2749 36.2903 27.7608 35.2959C25.3652 33.7366 24.0319 32.7648 21.7042 31.228C19.0148 29.4653 20.755 28.4935 22.2917 26.9116C22.6985 26.5048 29.6365 20.177 29.7721 19.612C29.7947 19.5442 29.7947 19.273 29.6365 19.1374C29.4783 19.0018 29.2523 19.047 29.0715 19.0922C28.8229 19.1374 25.0263 21.6685 17.6363 26.663C16.5515 27.4088 15.5797 27.7703 14.6984 27.7477C13.7266 27.7251 11.8735 27.2054 10.4723 26.7534C8.77736 26.211 7.4214 25.9172 7.53439 24.968C7.60219 24.4708 8.28017 23.9737 9.54573 23.4539Z"
-              fill="#50505D" />
-          </svg>
-
-
-        </a>
-        <a href="https://www.youtube.com/@NeuralAIM" class="footer__social-item">
-
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M38.127 12.3399C39.6523 12.7482 40.8511 13.9469 41.2593 15.4723C41.9972 18.2342 42.0002 24.0002 42.0002 24.0002C42.0002 24.0002 42.0002 29.7663 41.2593 32.5282C40.8511 34.0536 39.6523 35.2523 38.127 35.6605C35.3651 36.4014 24.2851 36.4014 24.2851 36.4014C24.2851 36.4014 13.2052 36.4014 10.4432 35.6605C8.91789 35.2523 7.71918 34.0536 7.31087 32.5282C6.57007 29.7663 6.57007 24.0002 6.57007 24.0002C6.57007 24.0002 6.57007 18.2342 7.31087 15.4723C7.71918 13.9469 8.91789 12.7482 10.4432 12.3399C13.2052 11.5991 24.2851 11.5991 24.2851 11.5991C24.2851 11.5991 35.3651 11.5991 38.127 12.3399ZM29.9431 24.0005L20.7385 29.3144V18.6865L29.9431 24.0005Z"
-              fill="#50505D" />
-          </svg>
-
-
-        </a>
-      </div>
-      <a href="https://yougame.biz" target="_blank" rel="noopener noreferrer" style="color: #50505D; text-decoration: none; font-size: 1em;">YOUGAY</a>
-    </div>
-  </footer>
-  <script src="js/script.js"></script>
-</body>
-
+      ym(108396053, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <!-- /Yandex.Metrika counter -->
+    <title>NAIM - Нейросеть для всех игр</title>
+    <meta
+      name="description"
+      content="NAIM - нейросеть для игр с AI-модулями, гибкими подписками, обучением моделей, NAPI-скриптами и поддержкой Windows 10+. Изучи возможности, уровни доступа и работу системы на видео."
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="theme-color" content="#07090f" />
+    <meta name="application-name" content="NAIM" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="canonical" href="https://neuralaim.ru/" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="NAIM" />
+    <meta property="og:title" content="NAIM - Нейросеть для всех игр" />
+    <meta property="og:description" content="NAIM - нейросеть для игр с AI-модулями, гибкими подписками, обучением моделей, NAPI-скриптами и поддержкой Windows 10+. Изучи возможности, уровни доступа и работу системы на видео." />
+    <meta property="og:url" content="https://neuralaim.ru/" />
+    <meta property="og:image" content="https://neuralaim.ru/files/feature-showcase/menu_1.png" />
+    <meta property="og:image:alt" content="Интерфейс NAIM с игровыми настройками и нейросетевыми модулями" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="NAIM - Нейросеть для всех игр" />
+    <meta name="twitter:description" content="NAIM - нейросеть для игр с AI-модулями, гибкими подписками, обучением моделей, NAPI-скриптами и поддержкой Windows 10+. Изучи возможности, уровни доступа и работу системы на видео." />
+    <meta name="twitter:image" content="https://neuralaim.ru/files/feature-showcase/menu_1.png" />
+    <link rel="icon" type="image/svg+xml" href="/files/favicon.svg" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://neuralaim.ru#organization",
+            "name": "NAIM",
+            "url": "https://neuralaim.ru",
+            "logo": "https://neuralaim.ru/files/logo.svg",
+            "image": "https://neuralaim.ru/files/feature-showcase/menu_1.png",
+            "sameAs": [
+              "https://t.me/neuralaim",
+              "https://www.youtube.com/@NeuralAIM",
+              "https://vk.com/neuralaim_vk",
+              "https://docs.neuralaim.ru"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://neuralaim.ru#website",
+            "url": "https://neuralaim.ru",
+            "name": "NAIM",
+            "description": "NAIM - нейросеть для игр с AI-модулями, гибкими подписками, обучением моделей, NAPI-скриптами и поддержкой Windows 10+. Изучи возможности, уровни доступа и работу системы на видео.",
+            "inLanguage": "ru",
+            "publisher": {
+              "@id": "https://neuralaim.ru#organization"
+            }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://neuralaim.ru/#software",
+            "name": "NAIM",
+            "url": "https://neuralaim.ru/",
+            "description": "NAIM - нейросеть для игр с AI-модулями, гибкими подписками, обучением моделей, NAPI-скриптами и поддержкой Windows 10+. Изучи возможности, уровни доступа и работу системы на видео.",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Windows 10+",
+            "image": "https://neuralaim.ru/files/feature-showcase/menu_1.png",
+            "downloadUrl": "https://s3.regru.cloud/naim-free/NAIM_V3.6.1_Free.exe",
+            "publisher": {
+              "@id": "https://neuralaim.ru#organization"
+            }
+          }
+        ]
+      }
+    </script>
+    <script type="module" crossorigin src="/assets/index-C_ZkRph9.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DCCb2GMe.css">
+  </head>
+  <body>
+    <noscript><div><img src="https://mc.yandex.ru/watch/108396053" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <div id="root"></div>
+  </body>
 </html>

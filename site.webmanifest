@@ -1,0 +1,19 @@
+{
+  "name": "NAIM",
+  "short_name": "NAIM",
+  "description": "NAIM - нейросеть для игр с AI-модулями, гибкими подписками и видеодемонстрациями.",
+  "lang": "ru",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#07090f",
+  "theme_color": "#07090f",
+  "icons": [
+    {
+      "src": "/files/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

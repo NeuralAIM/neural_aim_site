@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /account
+
+Sitemap: https://neuralaim.ru/sitemap.xml
+Host: neuralaim.ru
