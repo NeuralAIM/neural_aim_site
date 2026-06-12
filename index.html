@@ -5,17 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>
       (() => {
+        const referralStorageKey = "naim-payment-referral";
+        const referralParamNames = ["ref", "referral", "r"];
+        const normalizeReferral = (value) => (
+          (value || "")
+            .trim()
+            .replace(/\s+/g, "_")
+            .replace(/[^0-9A-Za-zА-Яа-яЁё_.:@+-]/g, "")
+            .slice(0, 64)
+        );
+
         const redirectedPath = window.sessionStorage.getItem("naim-spa-redirect");
-        if (!redirectedPath) {
+        if (redirectedPath) {
+          window.sessionStorage.removeItem("naim-spa-redirect");
+          const currentLocation = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+
+          if (redirectedPath !== currentLocation) {
+            window.history.replaceState(null, "", redirectedPath);
+          }
+        }
+
+        const query = new URLSearchParams(window.location.search);
+        let hasReferralParam = false;
+        let referral = "";
+
+        referralParamNames.forEach((name) => {
+          if (!query.has(name)) {
+            return;
+          }
+
+          hasReferralParam = true;
+          referral ||= normalizeReferral(query.get(name));
+          query.delete(name);
+        });
+
+        if (!hasReferralParam) {
           return;
         }
 
-        window.sessionStorage.removeItem("naim-spa-redirect");
-        const currentLocation = `${window.location.pathname}${window.location.search}${window.location.hash}`;
-
-        if (redirectedPath !== currentLocation) {
-          window.history.replaceState(null, "", redirectedPath);
+        if (referral) {
+          try {
+            window.localStorage.setItem(referralStorageKey, referral);
+          } catch {
+            // Ignore storage restrictions: URL cleanup should still happen.
+          }
         }
+
+        const cleanSearch = query.toString();
+        window.history.replaceState(
+          window.history.state,
+          "",
+          `${window.location.pathname}${cleanSearch ? `?${cleanSearch}` : ""}${window.location.hash}`,
+        );
       })();
     </script>
     <!-- Yandex.Metrika counter -->
@@ -102,8 +143,8 @@
         ]
       }
     </script>
-    <script type="module" crossorigin src="/assets/index-DeFy5PmE.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CwtBXd3q.css">
+    <script type="module" crossorigin src="/assets/index-CPhNaHrU.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DobWti0J.css">
   </head>
   <body>
     <noscript><div><img src="https://mc.yandex.ru/watch/108396053" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
