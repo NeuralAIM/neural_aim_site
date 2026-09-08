@@ -2,9 +2,9 @@
   "format": 2,
   "description": "Static cosmetic NAIM menu; no native bridge, account, API requests, durable storage or file actions. Hover media uses only the existing /files/NAIM.mp4. The separate reseller preview may load validated public reseller-logo SVG paths without credentials or a bounded, revalidated SVG image draft in memory.",
   "sources": {
-    "ui/index.html": "7ef31b189fbd957d67b2c45bd5a2ad85dc7dbaf1dd3efcd02c1bc19700a63669",
+    "ui/index.html": "1b486d860a4ed52faf25eee07e47caa21d918ceb4546e6075497571381d186d4",
     "ui/style.css": "6efe0fbfc74cc3d86d6758296408ad4ec5b0e78a1bac91873c38cbce43fc118d",
-    "ui/renderer.js": "2288bf6dd90ae62591dc5cc99fc2657d6234a7a7570b7f2ce056af6b947f650b",
+    "ui/renderer.js": "9b46b02d8c2e0826b103786371917c1f0f0dbc6dbe49f694fa0e03ed6b599377",
     "ui/assets/tutorial-target.webp": "a13d7d32d9cc231aca5a0b8bc06590599aa761366ac369cfd4dc50fccf28d722",
     "loader/Ubuntu-Regular.ttf": "540f19be11a368130641d00ec1c354b535c0803560f598d7d062486c9278387a",
     "loader/Ubuntu-Medium.ttf": "0d685f51c3bc394f02c8c218565ba423972cfb35c2542871e0a4ac0c3a0c16a6",
@@ -30,10 +30,10 @@
     "esbuild": "0.25.12"
   },
   "generated": {
-    "index.html": "16a7de9457972131d7c4a91a7512287ffa20600d4f4209573e8ad1732d1beed5",
+    "index.html": "1b01f24b429ba378b7515ccacc73ca1d74971cea5e175cfecea8c5ca43e03486",
     "style.css": "5840c2648242f741320fe4782ca6586aef877548af37dc8309d6f8ae40d14b4c",
     "embed.css": "2b8317035425dac905ea23b6cf3799cb3dd11feae35b400d2d29c9f45fb2ede3",
-    "renderer.js": "c1e7badd856d3823e042de8b19333139411824e46a2e52dde540f8cbe01808b4",
+    "renderer.js": "6935a1ba33b6ab07063913be37141e862d08041cd25f0bf09bd742871bc10dd8",
     "pre.js": "6ccfa3639bcc2cba2872cde5e7956b2192aef38884d308c1313095a3f7cb41e1",
     "post.js": "12d27ac1d41373a8cace130d283bc5a5034348f400d650c9801c0f7443918a2f",
     "theme-codec.js": "1eaf07a702bf0e332a7c5aa2bcb1270cdf002fcd0c620bfacd4e6493d40fc534",
@@ -41,7 +41,7 @@
     "i18n_manual.js": "e817c467a0466d19e8d6a4bf27fa145725ca7acfa5a6217c04e5c127c1896688",
     "i18n.js": "f9f05c1030378bcb176b3622440fba9ef6825223598c894cc8c75c40a0109b04",
     "LUCIDE_LICENSE.txt": "69ba28760c9e2f322f765f114750d5b38a82057f74054c775387d7be91be3e17",
-    "src/generated/menu-preview-revision.ts": "159b439d958bdc3aac1d3dc747a86c6b7335b16ef6a4e981be08e6501d8e6e0f"
+    "src/generated/menu-preview-revision.ts": "9ebd0f4900be777bb52b6ec137c195e7d750078408f1fb17cb414f4fd52b7662"
   },
-  "revision": "8f2d5f3b33dff5cbefd2fb6a4dd455df8c9d00e597d1d389d51579001b185b18"
+  "revision": "44223e45d6e0b30df52781f2ef3a0caf65d661c3eb06bbdeca790b23293ea4f5"
 }
