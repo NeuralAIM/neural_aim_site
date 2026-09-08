@@ -1,0 +1,139 @@
+/* Embedding/layout only: all color surfaces continue to use native tokens. */
+html.menu-playground,html.menu-playground body{width:100%;height:100%;min-width:0;margin:0;overflow:clip;overscroll-behavior:none;background:var(--background)}
+.menu-playground .app-shell,.menu-playground .workspace,.menu-playground .sidebar{overflow:clip!important}
+.menu-playground body{visibility:hidden}
+.menu-playground.playground-ready body{visibility:visible}
+.menu-playground .app-shell{inset:0;width:100%;height:100%;min-width:0;box-shadow:none;border:0;border-radius:0;grid-template-columns:218px minmax(0,1fr)}
+.menu-playground .app-shell::after{border:0;border-radius:0}
+.menu-playground .startup-reveal-panel,.menu-playground .startup-reveal-edge,.menu-playground #startup-loader-frame,.menu-playground .window-load-border,.menu-playground .workspace-window-mode{display:none!important}
+.menu-playground .sidebar-bottom{display:block;flex:0 0 auto;margin-top:auto;padding:14px 12px;border-top:1px solid var(--line-soft);background:transparent}
+.menu-playground .playground-guest-profile{display:grid;gap:12px;min-width:0}
+.menu-playground .playground-guest-identity{display:flex;align-items:center;gap:10px;min-width:0;color:var(--text)}
+.menu-playground .playground-guest-identity strong{font-size:14px;line-height:1.2;font-weight:600}
+.menu-playground .playground-guest-avatar{display:grid;place-items:center;flex:0 0 34px;width:34px;height:34px;border:1px solid var(--line);border-radius:11px;background:var(--control);box-shadow:var(--control-inset)}
+.menu-playground .playground-guest-avatar svg,.menu-playground .playground-guest-purchase svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.menu-playground .playground-guest-purchase{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;min-width:0;min-height:36px;padding:8px 10px;border:1px solid transparent;border-radius:10px;background:var(--accent);color:var(--on-accent);font:600 12px "Ubuntu",sans-serif;cursor:pointer;box-shadow:var(--control-inset);transition:filter 140ms ease}
+.menu-playground .playground-guest-purchase:hover{filter:brightness(.93)}
+.menu-playground .playground-guest-purchase:focus-visible{outline:2px solid var(--text);outline-offset:3px}
+.menu-playground .window-actions{display:flex!important;right:10px;gap:var(--ui-window-action-gap)}
+.menu-playground [data-settings-page="profile"],.menu-playground #market-toolbar,.menu-playground #market-topbar-balance,.menu-playground #market-filter-toggle{display:none!important}
+.menu-playground[data-ambient-page="market"] .menu-search{visibility:hidden;pointer-events:none}
+.menu-playground .playground-market-page{padding:0;overflow-x:hidden;overflow-y:auto}
+.menu-playground .playground-market-locked{position:relative;isolation:isolate;display:grid;place-items:center;min-height:100%;padding:32px 20px;box-sizing:border-box;background:var(--background);overflow:hidden}
+.menu-playground .playground-market-backdrop{position:absolute;z-index:-2;inset:28px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:18px;opacity:.28;filter:blur(3px);pointer-events:none}
+.menu-playground .playground-market-backdrop i{border:1px solid var(--line);border-radius:var(--ui-card-radius);background:linear-gradient(180deg,var(--card-hover) 0 48%,var(--card) 48%);box-shadow:var(--control-inset)}
+.menu-playground .playground-market-locked::before{content:"";position:absolute;z-index:-1;inset:0;background:radial-gradient(ellipse at center,color-mix(in srgb,var(--background) 96%,transparent) 12%,color-mix(in srgb,var(--background) 66%,transparent) 90%);pointer-events:none}
+.menu-playground .playground-market-lock-content{display:flex;flex-direction:column;align-items:center;max-width:350px;text-align:center;color:var(--text)}
+.menu-playground .playground-market-lock-icon{display:grid;place-items:center;width:70px;height:70px;margin-bottom:22px;border:1px solid var(--line-bright);border-radius:22px;background:var(--control);box-shadow:var(--control-inset);color:var(--text)}
+.menu-playground .playground-market-lock-icon svg{width:30px;height:30px;stroke:currentColor;stroke-width:1.65;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.menu-playground .playground-market-lock-content h2{margin:0;font-size:25px;line-height:1.2;letter-spacing:-.02em;font-weight:700}
+.menu-playground .playground-market-lock-content p{max-width:285px;margin:12px 0 25px;color:var(--muted);font-size:14px;line-height:1.55}
+.menu-playground .playground-market-purchase{min-width:155px;min-height:43px;padding:10px 25px;border:1px solid transparent;border-radius:11px;background:var(--accent);color:var(--on-accent);font:600 14px "Ubuntu",sans-serif;cursor:pointer;box-shadow:var(--control-inset);transition:transform 140ms var(--motion),filter 140ms ease}
+.menu-playground .playground-market-purchase:hover{filter:brightness(.93);transform:translateY(-1px)}
+.menu-playground .playground-market-purchase:active{transform:translateY(0) scale(.98)}
+.menu-playground .playground-market-purchase:focus-visible{outline:2px solid var(--text);outline-offset:4px}
+.menu-playground .nav-tabs button:disabled{opacity:.30;cursor:not-allowed}
+.menu-playground.playground-trainer .playground-guest-purchase,.menu-playground.playground-trainer .playground-market-purchase{display:none}
+.menu-playground .playground-training-target{outline:2px solid var(--accent);outline-offset:3px;box-shadow:0 0 0 5px color-mix(in srgb,var(--accent) 12%,transparent)}
+.menu-playground .toggle.playground-training-target{border-radius:20px;outline-offset:6px;box-shadow:0 0 0 8px color-mix(in srgb,var(--accent) 10%,transparent)}
+.menu-playground .playground-demo-cursor{position:fixed;left:0;top:0;z-index:2147483000;width:24px;height:28px;pointer-events:none;filter:drop-shadow(0 2px 4px #0006)}
+.menu-playground .playground-demo-cursor[hidden]{display:none}
+.menu-playground .playground-demo-cursor svg{width:24px;height:28px;fill:var(--text);stroke:var(--bg);stroke-width:1.5;stroke-linejoin:round}
+.menu-playground .playground-demo-cursor>span{position:absolute;left:22px;top:22px;width:max-content;max-width:min(210px,calc(100vw - 52px));padding:7px 10px;border:1px solid var(--line);border-radius:9px;background:var(--text);color:var(--bg);font:500 12px/1.45 Ubuntu,sans-serif;white-space:normal;overflow-wrap:anywhere}
+.menu-playground .playground-demo-cursor.is-left>span{left:auto;right:8px}
+.menu-playground .playground-demo-cursor.is-above>span{top:auto;bottom:8px}
+.menu-playground .playground-demo-target{outline:2px solid var(--accent);outline-offset:3px}
+.menu-playground .playground-demo-target.toggle{border-radius:20px;outline-offset:4px}
+/* A lesson displays one unchanged native card; body-mounted native dialogs remain available. */
+.menu-playground.playground-guide-card-mode .app-shell{grid-template-columns:minmax(0,1fr)}
+.menu-playground.playground-guide-card-mode .sidebar,.menu-playground.playground-guide-card-mode .topbar,.menu-playground.playground-guide-card-mode .window-actions,.menu-playground.playground-guide-card-mode .menu-search-results{display:none!important}
+.menu-playground.playground-guide-card-mode .page:not(.playground-guide-page){display:none!important}
+.menu-playground.playground-guide-card-mode .workspace>.card,.menu-playground.playground-guide-card-mode .data-studio-dock{display:none!important}
+.menu-playground.playground-guide-card-mode .header-divider,.menu-playground.playground-guide-card-mode .window-resize-grip{display:none!important}
+.menu-playground.playground-guide-card-mode .workspace::after{inset:0}
+.menu-playground.playground-guide-card-mode .playground-guide-page{inset:0;padding:12px;opacity:1;visibility:visible;pointer-events:auto;transform:none}
+.menu-playground.playground-guide-card-mode .cards-layout{display:block;max-width:680px;margin-inline:auto}
+.menu-playground.playground-guide-card-mode .cards-layout>:not(.playground-guide-card){display:none!important}
+.menu-playground.playground-guide-card-mode .playground-guide-card{width:100%;max-width:100%;grid-area:auto!important;animation:none}
+/* Profiles is the original top bar and original floating select menu, with no
+   duplicate card/controls and no unrelated full-height Aim page underneath. */
+.menu-playground.playground-guide-profiles-mode .topbar.window-titlebar{display:flex!important;position:absolute;inset:12px 12px auto;height:auto;min-height:76px;padding:16px;justify-content:flex-start;border:1px solid var(--line);border-radius:var(--ui-card-radius);background:var(--card)}
+.menu-playground.playground-guide-profiles-mode .topbar .menu-search,.menu-playground.playground-guide-profiles-mode .topbar .weapon-profile-control,.menu-playground.playground-guide-profiles-mode .topbar .config-save-button{display:none!important}
+.menu-playground.playground-guide-profiles-mode .topbar .config-toolbar{display:flex!important;justify-content:flex-start;min-width:0;width:100%;margin:0}
+.menu-playground.playground-guide-card-mode[data-guide-view="web-panel"] #web-panel-url{overflow-wrap:anywhere}
+.menu-playground .nav-tabs button{height:65px;padding-inline:18px;gap:13px}
+.menu-playground .nav-tabs::before{height:57px}
+.menu-playground .nav-tabs button strong{font-size:15px}
+.menu-playground .topbar.window-titlebar{padding:0 calc(2 * var(--ui-window-action-size) + var(--ui-window-action-gap) + 20px) 0 16px;gap:10px}
+/* Preserve native search flex-shrink:20, profile/weapon widths and minimums.
+   The search gives up space before the selected profile labels do. */
+.menu-playground .page{overflow-x:hidden;overscroll-behavior:contain;scrollbar-gutter:auto}
+.menu-playground .card{min-width:0}
+.menu-playground .workspace-modal{padding:10px}
+.menu-playground .workspace-panel{max-width:100%;max-height:100%}
+.menu-playground .custom-select-menu{max-width:calc(100vw - 20px)}
+.menu-playground.playground-paused *, .menu-playground.playground-paused *::before,.menu-playground.playground-paused *::after{animation-play-state:paused!important}
+@media(max-width:1000px){
+  .menu-playground .nav-tabs button{padding-inline:14px;gap:10px}
+  .menu-playground .nav-tabs button strong{font-size:14px}
+  .menu-playground .cards-layout{--masonry-columns:1;grid-template-columns:minmax(0,1fr);grid-auto-rows:auto;row-gap:var(--card-gap)}
+  .menu-playground .cards-layout>*{grid-column:1!important;grid-row:auto!important}
+}
+/* Below this width both native selector minimums and the 48px search cannot
+   share the 218px-sidebar header safely. Retain the configuration selector. */
+@media(max-width:760px){
+  .menu-playground .weapon-profile-control{display:none}
+}
+@media(max-width:700px){
+  .menu-playground .capture-settings-workspace .capture-advanced{grid-template-columns:minmax(0,1fr)}
+  .menu-playground #capture-settings-sources button{white-space:normal;overflow-wrap:anywhere;padding-inline:4px;font-size:10px;line-height:1.25}
+  .menu-playground.playground-guide-card-mode #capture-source button{white-space:normal;overflow-wrap:anywhere;padding-inline:4px;font-size:10px;line-height:1.25}
+  .menu-playground.playground-guide-card-mode .mouse-calibration-summary{grid-template-columns:32px minmax(0,1fr);gap:10px 12px}
+  .menu-playground.playground-guide-card-mode .mouse-calibration-summary>button{grid-column:1/-1;justify-self:end;margin-top:2px}
+  .menu-playground.playground-guide-card-mode .web-panel-password>div{display:flex;flex-wrap:wrap;gap:8px}
+  .menu-playground.playground-guide-card-mode .web-panel-password>div>input{min-width:0;width:100%;flex:1 1 100%}
+  .menu-playground.playground-guide-card-mode .web-panel-password>div>button{flex:1 1 auto}
+  .menu-playground.playground-guide-card-mode #web-panel-url{overflow-wrap:anywhere;word-break:break-word}
+  .menu-playground.playground-guide-card-mode .app-action-grid{grid-template-columns:minmax(0,1fr)}
+  .menu-playground.playground-trainer .hotkey-editor-popover{grid-template-columns:minmax(0,1fr)}
+  .menu-playground.playground-trainer .hotkey-mode{flex-wrap:wrap;gap:6px;padding-block:8px}
+  .menu-playground.playground-trainer .hotkey-mode>div{width:100%;flex:1 1 100%}
+  .menu-playground{--ui-page-padding-inline:10px;--ui-page-padding-top:12px;--ui-card-gap:12px}
+  .menu-playground .app-shell{grid-template-columns:58px minmax(0,1fr)}
+  .menu-playground .brand{padding:0;min-width:0;height:68px}
+  .menu-playground .brand-copy{display:none}
+  .menu-playground .brand{justify-content:center}
+  .menu-playground .brand .brand-native-logo{width:23px;height:30px;flex-basis:23px}
+  .menu-playground .sidebar-bottom{padding:10px 6px}
+  .menu-playground .playground-guest-profile{justify-items:center;gap:10px}
+  .menu-playground .playground-guest-identity{flex-direction:column;gap:5px}
+  .menu-playground .playground-guest-identity strong{font-size:11px}
+  .menu-playground .playground-guest-avatar{width:28px;height:28px;flex-basis:28px;border-radius:9px}
+  .menu-playground .playground-guest-purchase{width:36px;min-height:34px;padding:7px}
+  .menu-playground .playground-guest-purchase span{display:none}
+  .menu-playground .nav-tabs button{height:60px;padding:0;justify-content:center}
+  .menu-playground .nav-tabs button>span,.menu-playground .nav-workspace-icon{display:none!important}
+  .menu-playground .nav-tabs::before{height:52px;left:5px;right:5px}
+  .menu-playground .nav-tabs button::after{left:3px;height:23px}
+  .menu-playground .topbar.window-titlebar{padding-left:10px}
+  .menu-playground .config-toolbar{display:none}
+  .menu-playground .feature-card-title strong,.menu-playground .card>h2{font-size:17px}
+  .menu-playground .card{padding:13px}
+  .menu-playground .range-row>span{gap:5px}
+  .menu-playground .range-row strong{font-size:12px}
+  .menu-playground .range-row output{font-size:12px}
+  .menu-playground .two-cols,.menu-playground .inline-toggles,.menu-playground .compact-ranges{grid-template-columns:minmax(0,1fr)}
+  .menu-playground .select-row{min-width:0;gap:8px;flex-wrap:wrap}
+  .menu-playground .select-row>span{flex-basis:100%}
+  .menu-playground .select-row>.custom-select,.menu-playground .select-row>.choice-dropdown{min-width:0;max-width:100%;width:100%;flex:1 1 100%}
+  .menu-playground .player-visuals-editor,.menu-playground .player-visuals-controls{min-width:0;grid-template-columns:minmax(0,1fr)}
+  .menu-playground .player-info-choice{min-width:0;display:grid;grid-template-columns:minmax(0,1fr);gap:8px}
+  .menu-playground .player-info-choice .choice-dropdown{width:100%;min-width:0;max-width:100%}
+  .menu-playground .choice-dropdown-trigger{min-width:0;max-width:100%}
+  .menu-playground .choice-dropdown-trigger>span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .menu-playground .choice-dropdown-menu{min-width:0;max-width:calc(100vw - 90px)}
+  .menu-playground .data-studio-launcher{grid-template-columns:minmax(0,1fr) auto;gap:8px;padding:10px}
+  .menu-playground .studio-launcher-stats{display:none}
+  .menu-playground .script-workspace,.menu-playground .scripts-layout{min-width:0;grid-template-columns:minmax(0,1fr)}
+  .menu-playground .script-sidebar{display:none}
+}
