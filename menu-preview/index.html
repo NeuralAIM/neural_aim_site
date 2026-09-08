@@ -7,15 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Control Panel</title>
   
-  <link rel="stylesheet" href="./style.css?v=83eb4ead1a61140567431b3b8e6c7c2704366d1686ad166b5aa115a01ce6ff16">
-  <link rel="stylesheet" href="./embed.css?v=83eb4ead1a61140567431b3b8e6c7c2704366d1686ad166b5aa115a01ce6ff16">
-  <script defer src="./theme-codec.js?v=83eb4ead1a61140567431b3b8e6c7c2704366d1686ad166b5aa115a01ce6ff16"></script>
-  <script defer src="./pre.js?v=83eb4ead1a61140567431b3b8e6c7c2704366d1686ad166b5aa115a01ce6ff16"></script>
-  <script defer src="./i18n_catalog.js?v=83eb4ead1a61140567431b3b8e6c7c2704366d1686ad166b5aa115a01ce6ff16"></script>
-  <script defer src="./i18n_manual.js?v=83eb4ead1a61140567431b3b8e6c7c2704366d1686ad166b5aa115a01ce6ff16"></script>
-  <script defer src="./i18n.js?v=83eb4ead1a61140567431b3b8e6c7c2704366d1686ad166b5aa115a01ce6ff16"></script>
-  <script defer src="./renderer.js?v=83eb4ead1a61140567431b3b8e6c7c2704366d1686ad166b5aa115a01ce6ff16"></script>
-  <script defer src="./post.js?v=83eb4ead1a61140567431b3b8e6c7c2704366d1686ad166b5aa115a01ce6ff16"></script>
+  <link rel="stylesheet" href="./style.css?v=8f2d5f3b33dff5cbefd2fb6a4dd455df8c9d00e597d1d389d51579001b185b18">
+  <link rel="stylesheet" href="./embed.css?v=8f2d5f3b33dff5cbefd2fb6a4dd455df8c9d00e597d1d389d51579001b185b18">
+  <script defer src="./theme-codec.js?v=8f2d5f3b33dff5cbefd2fb6a4dd455df8c9d00e597d1d389d51579001b185b18"></script>
+  <script defer src="./pre.js?v=8f2d5f3b33dff5cbefd2fb6a4dd455df8c9d00e597d1d389d51579001b185b18"></script>
+  <script defer src="./i18n_catalog.js?v=8f2d5f3b33dff5cbefd2fb6a4dd455df8c9d00e597d1d389d51579001b185b18"></script>
+  <script defer src="./i18n_manual.js?v=8f2d5f3b33dff5cbefd2fb6a4dd455df8c9d00e597d1d389d51579001b185b18"></script>
+  <script defer src="./i18n.js?v=8f2d5f3b33dff5cbefd2fb6a4dd455df8c9d00e597d1d389d51579001b185b18"></script>
+  <script defer src="./renderer.js?v=8f2d5f3b33dff5cbefd2fb6a4dd455df8c9d00e597d1d389d51579001b185b18"></script>
+  <script defer src="./post.js?v=8f2d5f3b33dff5cbefd2fb6a4dd455df8c9d00e597d1d389d51579001b185b18"></script>
 </head>
 <body>
   
@@ -312,7 +312,7 @@
                 <span class="visual-widget-actions"><button class="player-element-settings" type="button" data-visual-settings="runtime" aria-label="Configure runtime status panel"><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="settings-2"><path d="M14 17H5"></path><path d="M19 7h-9"></path><circle cx="17" cy="17" r="3"></circle><circle cx="7" cy="7" r="3"></circle></svg></button><label class="toggle"><input id="runtime-status-rail-enabled" type="checkbox" checked><span class="toggle-track"><span class="toggle-thumb"></span></span></label></span>
               </div>
               <div class="preference-row visual-widget-row" data-visual-element="status">
-                <span><strong>Status HUD</strong><small>Show NAIM, display refresh rate and clock in the top-left corner</small></span>
+                <span><strong>Status HUD</strong><small>Show {{app_name}}, display refresh rate and clock in the top-left corner</small></span>
                 <span class="visual-widget-actions"><button class="player-element-settings" type="button" data-visual-settings="status" aria-label="Configure Status HUD"><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="settings-2"><path d="M14 17H5"></path><path d="M19 7h-9"></path><circle cx="17" cy="17" r="3"></circle><circle cx="7" cy="7" r="3"></circle></svg></button><label class="toggle"><input id="status-hud-enabled" type="checkbox" checked><span class="toggle-track"><span class="toggle-thumb"></span></span></label></span>
               </div>
               <div class="preference-row visual-widget-row" data-visual-element="game-info">
@@ -320,7 +320,7 @@
                 <span class="visual-widget-actions"><button class="player-element-settings" type="button" data-visual-settings="game-info" aria-label="Configure game information"><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="settings-2"><path d="M14 17H5"></path><path d="M19 7h-9"></path><circle cx="17" cy="17" r="3"></circle><circle cx="7" cy="7" r="3"></circle></svg></button><label class="toggle"><input id="game-info-hud-enabled" type="checkbox" checked><span class="toggle-track"><span class="toggle-thumb"></span></span></label></span>
               </div>
               <div class="preference-row mouse-trajectory-master-row visual-widget-row" data-visual-element="motion">
-                <span><strong>Aim trajectory</strong><small id="mouse-trajectory-calibration-status">Player movement, NAIM guidance and the assistance handoff point</small></span>
+                <span><strong>Aim trajectory</strong><small id="mouse-trajectory-calibration-status">Player movement, {{app_name}} guidance and the assistance handoff point</small></span>
                 <span class="visual-widget-actions"><button class="player-element-settings" type="button" data-visual-settings="motion" aria-label="Configure Aim trajectory"><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="settings-2"><path d="M14 17H5"></path><path d="M19 7h-9"></path><circle cx="17" cy="17" r="3"></circle><circle cx="7" cy="7" r="3"></circle></svg></button><label class="toggle"><input id="mouse-motion-visual-enabled" type="checkbox"><span class="toggle-track"><span class="toggle-thumb"></span></span></label></span>
               </div>
               <div class="preference-row compass-master-row visual-widget-row" data-visual-element="compass">
@@ -352,7 +352,7 @@
                 </span>
                 <label class="toggle"><input id="status-hud-blur-enabled" type="checkbox"><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
               </div>
-              <label class="select-row"><span><strong>Capture privacy</strong><small>Hide selected NAIM windows from OBS and compatible capture apps</small></span><select id="capture-exclusion-mode"><option value="0">Off</option><option value="1">Visuals only</option><option value="2">Menu only</option><option value="3">Everything</option></select></label>
+              <label class="select-row"><span><strong>Capture privacy</strong><small>Hide selected {{app_name}} windows from OBS and compatible capture apps</small></span><select id="capture-exclusion-mode"><option value="0">Off</option><option value="1">Visuals only</option><option value="2">Menu only</option><option value="3">Everything</option></select></label>
             </div>
           </section>
 
@@ -421,7 +421,7 @@
             <div class="card-head"><div><strong>Menu behavior</strong><small>Visibility and input behavior over fullscreen applications</small></div></div>
             <div class="preference-list">
               <div class="preference-row">
-                <span><strong>Always on top</strong><small>Keep the NAIM menu above other windows</small></span>
+                <span><strong>Always on top</strong><small>Keep the {{app_name}} menu above other windows</small></span>
                 <label class="toggle"><input id="menu-always-on-top" type="checkbox" checked><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
               </div>
               <div class="preference-row">
@@ -433,7 +433,7 @@
                 <label class="toggle"><input id="menu-focus-on-show" type="checkbox" checked><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
               </div>
               <div class="preference-row">
-                <span><strong>Lock outside clicks</strong><small>While the menu is open, clicks work only inside NAIM</small></span>
+                <span><strong>Lock outside clicks</strong><small>While the menu is open, clicks work only inside {{app_name}}</small></span>
                 <label class="toggle"><input id="menu-lock-outside-clicks" type="checkbox"><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
               </div>
               <div class="preference-row">
@@ -465,7 +465,7 @@
               <div class="feature-switch"><span data-feature-state>Disabled</span><label class="toggle"><input id="aim-algorithmic-humanizer" type="checkbox"><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
             </div>
             <div class="feature-card-body">
-              <div class="master-row algorithmic-humanizer-smart-mode-row"><span><strong>Smart mode</strong><small>Automatically continues your physical mouse movement</small></span><span class="feature-runtime-status" id="aim-algorithmic-humanizer-v2-status" hidden></span><label class="toggle"><input id="aim-algorithmic-humanizer-v2" type="checkbox"><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
+              <div class="master-row algorithmic-humanizer-smart-mode-row"><span><strong>Smart humanizer mode</strong><small>Automatically continues your physical mouse movement</small></span><span class="feature-runtime-status" id="aim-algorithmic-humanizer-v2-status" hidden></span><label class="toggle"><input id="aim-algorithmic-humanizer-v2" type="checkbox"><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
               <label class="range-row algorithmic-humanizer-strength-row"><span><strong id="aim-algorithmic-humanizer-strength-label">Strength</strong><output id="aim-algorithmic-humanizer-strength-value">20%</output></span><input id="aim-algorithmic-humanizer-strength" data-setting="aim_algorithmic_humanizer_strength" data-suffix="%" type="range" min="0" max="90" step="1" value="20"></label>
             </div>
           </section>
@@ -477,7 +477,7 @@
             </div>
             <div class="feature-card-body">
               <div class="medius-humanizer-profile-row">
-                <span><strong>Mouse movement profile</strong><small>Preserves Aim sensitivity · no NAIM calibration required</small></span>
+                <span><strong>Mouse movement profile</strong><small>Preserves Aim sensitivity · no {{app_name}} calibration required</small></span>
                 <strong id="medius-ai-humanizer-status">Waiting for movement</strong>
               </div>
               <div class="medius-humanizer-progress" id="medius-ai-humanizer-progress" role="progressbar" aria-label="Medius device profile status" aria-valuemin="0" aria-valuemax="100"><i></i></div>
@@ -619,7 +619,7 @@
             </div>
           </section>
           <section class="card card-wide web-panel-card mcp-server-card">
-            <div class="card-head card-heading web-panel-heading"><div class="feature-card-title"><strong>AI connection (MCP)</strong><small>Let local AI tools work with this NAIM menu, NAPI documentation and Script Studio.</small></div><label class="toggle"><input id="mcp-server-enabled" type="checkbox"><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
+            <div class="card-head card-heading web-panel-heading"><div class="feature-card-title"><strong>AI connection (MCP)</strong><small>Let local AI tools work with this {{app_name}} menu, NAPI documentation and Script Studio.</small></div><label class="toggle"><input id="mcp-server-enabled" type="checkbox"><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
             <div class="web-panel-details" id="mcp-server-details" hidden>
               <div><small>LOCAL MCP ADDRESS</small><code id="mcp-server-url">Starting local MCP...</code></div>
               <span class="mcp-server-actions"><button class="quiet-settings-button" id="mcp-server-copy-instruction" type="button" disabled>Copy instruction for AI</button><button class="quiet-settings-button" id="mcp-server-rotate" type="button">Change access token</button></span>
@@ -678,7 +678,7 @@
             <div class="app-action-grid">
               <button class="app-action-button app-action-restart" id="app-restart-action" type="button">
                 <svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="refresh-cw"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path><path d="M8 16H3v5"></path></svg>
-                <span><strong>Restart NAIM</strong><small>Reload runtime and reopen automatically</small></span>
+                <span><strong>Restart {{app_name}}</strong><small>Reload runtime and reopen automatically</small></span>
               </button>
               <button class="app-action-button" id="menu-visibility-action" type="button">
                 <svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="eye-off"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"></path><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"></path><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"></path><path d="m2 2 20 20"></path></svg>
@@ -686,7 +686,7 @@
               </button>
               <button class="app-action-button app-action-danger" id="app-shutdown-action" type="button">
                 <svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="power"><path d="M12 2v10"></path><path d="M18.4 6.6a9 9 0 1 1-12.77.04"></path></svg>
-                <span><strong>Unload NAIM</strong><small>Stop runtime and release resources</small></span><span class="app-action-keys" id="app-shutdown-keys"><kbd>Delete</kbd></span>
+                <span><strong>Unload {{app_name}}</strong><small>Stop runtime and release resources</small></span><span class="app-action-keys" id="app-shutdown-keys"><kbd>Delete</kbd></span>
               </button>
             </div>
           </section>
@@ -952,7 +952,7 @@
             <span class="profile-battery-copy"><strong id="profile-hardware-battery">—</strong><small id="profile-hardware-battery-detail">Portable power</small></span>
           </div>
           <section class="profile-identity-card">
-            <span class="profile-kicker">NAIM profile</span>
+            <span class="profile-kicker">{{app_name}} profile</span>
             <div class="profile-identity-line">
               <span class="profile-avatar" id="profile-avatar">N</span>
               <div class="profile-identity-copy">
@@ -1062,7 +1062,7 @@
     <div class="workspace-panel translation-studio-workspace">
       <header class="studio-header window-titlebar app-window-titlebar drag-region">
         <span class="studio-brand-mark translation-studio-mark" aria-hidden="true"><svg class="lucide-icon" viewBox="0 0 24 24" data-lucide="file-text"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg></span>
-        <div class="studio-heading"><strong>Translation Studio</strong><small>Create and edit language files without leaving NAIM</small></div>
+        <div class="studio-heading"><strong>Translation Studio</strong><small>Create and edit language files without leaving {{app_name}}</small></div>
         <span class="studio-header-separator" aria-hidden="true"></span>
         <div class="studio-header-actions translation-studio-actions" data-no-drag>
           <span class="translation-save-state" id="translation-save-state">No unsaved changes</span>
@@ -1080,7 +1080,7 @@
           <label><span>Language code</span><input id="translation-language-code" type="text" maxlength="16" autocomplete="off" spellcheck="false" placeholder="de"></label>
           <label><span>Missing strings use</span><select id="translation-language-fallback"><option value="en">English</option><option value="ru">Русский</option><option value="zh">中文</option></select></label>
           <div class="translation-studio-summary"><span><small>TRANSLATED</small><strong id="translation-count-complete">0</strong></span><span><small>MISSING</small><strong id="translation-count-missing">0</strong></span><span><small>TOTAL</small><strong id="translation-count-total">0</strong></span></div>
-          <p class="translation-studio-help"><i></i><span><strong>Dynamic values and placeholders</strong><small>NAIM inserts live values automatically. Keep highlighted markers unchanged and translate only the text around them.</small><code data-i18n-literal>{1} · {2}</code></span></p>
+          <p class="translation-studio-help"><i></i><span><strong>Dynamic values and placeholders</strong><small>{{app_name}} inserts live values automatically. Keep highlighted markers unchanged and translate only the text around them.</small><code data-i18n-literal>{1} · {2} · {{app_name}}</code></span></p>
         </aside>
         <main class="translation-studio-editor">
           <div class="translation-studio-toolbar">
@@ -1280,7 +1280,7 @@
   <section class="optimizer-screen" id="optimizer-screen" aria-hidden="true">
     <div class="optimizer-aurora" aria-hidden="true"></div>
     <header class="optimizer-header drag-region">
-      <div class="optimizer-kicker"><span>NAIM</span> ADAPTIVE GRAPH OPTIMIZATION</div>
+      <div class="optimizer-kicker"><span>{{app_name}}</span> ADAPTIVE GRAPH OPTIMIZATION</div>
       <div class="optimizer-pass" id="optimizer-pass">PASS 01 / 04</div>
       <h2 id="optimizer-title">Preparing model graph</h2>
       <p id="optimizer-subtitle">Inspecting fixed-shape operators and execution capabilities</p>
@@ -1294,7 +1294,7 @@
         <div class="optimizer-particles" id="optimizer-particles" aria-hidden="true"></div>
         <div class="optimizer-wait-notice" role="status" aria-live="polite">
           <i aria-hidden="true"></i>
-          <span><strong id="optimizer-wait-title">Model optimization is still running</strong><small id="optimizer-wait-detail">NAIM is still working. Building the model and selecting execution tactics can take up to 15–20 minutes.</small></span>
+          <span><strong id="optimizer-wait-title">Model optimization is still running</strong><small id="optimizer-wait-detail">{{app_name}} is still working. Building the model and selecting execution tactics can take up to 15–20 minutes.</small></span>
         </div>
         <div class="optimizer-camera-guide" data-no-drag><button type="button" id="optimizer-reset-camera" disabled>Reset view</button><span>Drag to move · Wheel to zoom</span></div>
       </div>
@@ -1320,11 +1320,11 @@
           <div class="model-class-map-canvas" id="model-class-map-canvas">
             <section><h3>MODEL CLASSES</h3><div class="model-class-map-list" id="model-class-map-sources"></div></section>
             <svg class="model-class-map-links" id="model-class-map-links" aria-hidden="true" data-icon-artwork="visualization"></svg>
-            <section><h3>NAIM TARGETS</h3><div class="model-class-map-list is-targets" id="model-class-map-targets"></div></section>
+            <section><h3>{{app_name}} TARGETS</h3><div class="model-class-map-list is-targets" id="model-class-map-targets"></div></section>
           </div>
         </div>
         <footer>
-          <p><strong id="model-class-map-model">Model</strong><small>Choose a class, then choose its NAIM target. Unknown classes can be ignored safely.</small></p>
+          <p><strong id="model-class-map-model">Model</strong><small>Choose a class, then choose its {{app_name}} target. Unknown classes can be ignored safely.</small></p>
           <button type="button" class="settings-button quiet-settings-button" id="model-class-map-auto">Auto match</button>
           <button type="button" class="settings-button is-primary" id="model-class-map-confirm">Confirm mapping</button>
         </footer>
@@ -1343,14 +1343,14 @@
     <section class="first-login-onboarding-panel" role="dialog" aria-modal="true" aria-labelledby="first-login-onboarding-title" aria-describedby="first-login-onboarding-description">
       <header class="window-titlebar drag-region">
         <span class="first-login-onboarding-icon" aria-hidden="true"><svg class="lucide-icon" viewBox="0 0 24 24" data-lucide="scan"><path d="M3 7V5a2 2 0 0 1 2-2h2"></path><path d="M17 3h2a2 2 0 0 1 2 2v2"></path><path d="M21 17v2a2 2 0 0 1-2 2h-2"></path><path d="M7 21H5a2 2 0 0 1-2-2v-2"></path></svg></span>
-        <span><h2 id="first-login-onboarding-title">Let's set up NAIM</h2><p id="first-login-onboarding-description">We will go through a few simple steps together. You can change everything later.</p></span>
+        <span><h2 id="first-login-onboarding-title">Let's set up {{app_name}}</h2><p id="first-login-onboarding-description">We will go through a few simple steps together. You can change everything later.</p></span>
         <ol class="setup-progress" id="setup-progress" aria-label="Setup progress" data-no-drag>
           <li data-setup-progress="3"><i></i><span>Benchmark</span></li>
           <li data-setup-progress="1"><i></i><span>Capture</span></li>
           <li data-setup-progress="2"><i></i><span>Input</span></li>
           <li data-setup-progress="5"><i></i><span>Game</span></li>
         </ol>
-        <button class="workspace-close setup-welcome-close" id="setup-welcome-close" type="button" aria-label="Exit NAIM"><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="x"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+        <button class="workspace-close setup-welcome-close" id="setup-welcome-close" type="button" aria-label="Exit {{app_name}}"><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="x"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
       </header>
       <div class="setup-config-recovery-inline" id="setup-config-recovery-inline" hidden>
         <svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="file-warning"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M12 12v4"></path><path d="M12 19h.01"></path></svg>
@@ -1364,7 +1364,7 @@
             <button type="button" class="setup-import-drop" id="first-login-onboarding-import">
               <span class="setup-import-target">
                 <span class="setup-import-glyph"><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="file-text"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg></span>
-                <span><strong>Import configuration</strong><small>Drop a NAIM .ini here or click to choose it</small></span>
+                <span><strong>Import configuration</strong><small>Drop a {{app_name}} .ini here or click to choose it</small></span>
               </span>
               <em id="setup-import-status">The original file will not be changed</em>
             </button>
@@ -1423,7 +1423,7 @@
 
         <div class="setup-stage" data-setup-stage="3">
           <div class="setup-benchmark-intro" id="setup-benchmark-intro">
-            <div class="setup-benchmark-intro-head"><span class="first-login-option-icon"><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="gauge"><path d="m12 14 4-4"></path><path d="M3.34 19a10 10 0 1 1 17.32 0"></path></svg></span><span><small>BENCHMARK</small><h3>Check this PC</h3><p>Close games and other demanding programs for a moment. NAIM will compare the available modes and suggest the best fit.</p></span></div>
+            <div class="setup-benchmark-intro-head"><span class="first-login-option-icon"><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="gauge"><path d="m12 14 4-4"></path><path d="M3.34 19a10 10 0 1 1 17.32 0"></path></svg></span><span><small>BENCHMARK</small><h3>Check this PC</h3><p>Close games and other demanding programs for a moment. {{app_name}} will compare the available modes and suggest the best fit.</p></span></div>
             <div class="setup-benchmark-plan" aria-label="Benchmark steps">
               <article><span><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="cpu"><path d="M12 20v2"></path><path d="M12 2v2"></path><path d="M17 20v2"></path><path d="M17 2v2"></path><path d="M2 12h2"></path><path d="M2 17h2"></path><path d="M2 7h2"></path><path d="M20 12h2"></path><path d="M20 17h2"></path><path d="M20 7h2"></path><path d="M7 20v2"></path><path d="M7 2v2"></path><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="8" y="8" width="8" height="8" rx="1"></rect></svg></span><strong>CPU</strong><small>Processor test</small></article>
               <i aria-hidden="true"></i>
@@ -1464,11 +1464,11 @@
           <div class="setup-calibration-layout">
             <div class="setup-calibration-bind-row">
               <div class="setup-bind-change-animation" id="setup-calibration-bind-guide" aria-hidden="true"></div>
-              <div class="setup-calibration-bind-panel"><div><h3>Game calibration</h3><p>Choose a start key, then return to the game. Right-click the bind to change it.</p></div><button type="button" class="setup-bind-button" id="setup-calibration-open"><span>Calibration bind</span><kbd id="setup-calibration-key">F8</kbd><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="chevron-right"><path d="m9 18 6-6-6-6"></path></svg></button></div>
+              <div class="setup-calibration-bind-panel"><div><h3>Game calibration</h3><p>Choose a start key, then return to the game. Right-click the bind to change it.</p></div><button type="button" class="setup-bind-button" id="setup-calibration-open"><span>Calibration bind</span><kbd id="setup-calibration-key">Mouse4</kbd><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="chevron-right"><path d="m9 18 6-6-6-6"></path></svg></button></div>
             </div>
             <div class="setup-calibration-run-row">
-              <div class="setup-bind-animation" id="setup-calibration-animation" data-phase="ready" aria-hidden="true"><div class="setup-game-window"><span class="setup-target-dot"></span><span class="setup-cursor-dot"></span><span class="setup-calibration-return"></span><span class="setup-calibration-progress-demo"><i></i></span></div><div class="setup-key-demo"><kbd id="setup-bind-key-visual">F8</kbd><span></span></div><div class="setup-calibration-phase-list"><span data-calibration-step="reference">Reference</span><span data-calibration-step="rotate">Rotation</span><span data-calibration-step="return">Return</span><span data-calibration-step="measure">FOV &amp; latency</span><span data-calibration-step="complete">Ready</span></div></div>
-              <div class="setup-calibration-notes"><p>Open the game before pressing the start key. Once calibration begins, do not touch the mouse or keyboard.</p><div class="first-login-onboarding-warning"><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="triangle-alert"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg><span><strong>Calibration is optional</strong><small id="setup-console-calibration-note">If you play on a console, you can skip this step: calibration is unlikely to work.</small><small>Without it Smart Mode and Humanizer V2 remain unavailable, and movement safety may be lower.</small></span></div><div class="setup-topology-note" id="setup-topology-note"><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="shield-check"><path d="M20 13c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V5l8-3 8 3v8Z"></path><path d="m9 12 2 2 4-4"></path></svg><span><strong id="setup-topology-title" data-i18n-runtime>For better safety</strong><small id="setup-topology-description" data-i18n-runtime>When possible, we recommend using a second PC for capture and hardware input.</small></span></div></div>
+              <div class="setup-bind-animation" id="setup-calibration-animation" data-phase="ready" aria-hidden="true"><div class="setup-game-window"><span class="setup-target-dot"></span><span class="setup-cursor-dot"></span><span class="setup-calibration-return"></span><span class="setup-calibration-progress-demo"><i></i></span></div><div class="setup-key-demo"><kbd id="setup-bind-key-visual">Mouse4</kbd><span></span></div><div class="setup-calibration-phase-list"><span data-calibration-step="reference">Reference</span><span data-calibration-step="rotate">Rotation</span><span data-calibration-step="return">Return</span><span data-calibration-step="measure">FOV &amp; latency</span><span data-calibration-step="complete">Ready</span></div></div>
+              <div class="setup-calibration-notes"><p>Open the game before pressing the start key. Once calibration begins, do not touch the mouse or keyboard.</p><div class="first-login-onboarding-warning"><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="triangle-alert"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg><span><strong>Calibration is optional</strong><small id="setup-console-calibration-note">If you play on a console, you can skip this step: calibration is unlikely to work.</small><small>Without calibration, smart predictor and humanizer modes remain unavailable, and movement safety may be lower.</small></span></div><div class="setup-topology-note" id="setup-topology-note"><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="shield-check"><path d="M20 13c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V5l8-3 8 3v8Z"></path><path d="m9 12 2 2 4-4"></path></svg><span><strong id="setup-topology-title" data-i18n-runtime>For better safety</strong><small id="setup-topology-description" data-i18n-runtime>When possible, we recommend using a second PC for capture and hardware input.</small></span></div></div>
             </div>
           </div>
         </div>
@@ -1487,7 +1487,7 @@
           </section>
         </div>
       </div>
-      <div class="setup-launching" id="setup-launching" hidden><span class="setup-launching-spinner" aria-hidden="true"></span><strong>Starting NAIM</strong><small>Just a moment…</small></div>
+      <div class="setup-launching" id="setup-launching" hidden><span class="setup-launching-spinner" aria-hidden="true"></span><strong>Starting {{app_name}}</strong><small>Just a moment…</small></div>
       <footer class="setup-footer" id="setup-footer"><button type="button" class="quiet-settings-button" id="setup-back"><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="arrow-left"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>Back</button><span></span><button type="button" class="quiet-settings-button setup-skip" id="first-login-onboarding-skip">Skip calibration</button><button type="button" class="settings-button setup-next" id="setup-next"><span id="setup-next-label" data-i18n-runtime>Continue</span><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="arrow-right"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button></footer>
     </section>
   </div>
@@ -1497,7 +1497,7 @@
       <span class="progress-water nvidia-runtime-water" id="nvidia-runtime-water" aria-hidden="true"><i></i></span>
       <button class="nvidia-runtime-close" type="button" id="nvidia-runtime-close" aria-label="Close"><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="x"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
       <span class="nvidia-runtime-icon" aria-hidden="true"><svg class="lucide-icon" viewBox="0 0 24 24" data-lucide="cpu"><path d="M12 20v2"></path><path d="M12 2v2"></path><path d="M17 20v2"></path><path d="M17 2v2"></path><path d="M2 12h2"></path><path d="M2 17h2"></path><path d="M2 7h2"></path><path d="M20 12h2"></path><path d="M20 17h2"></path><path d="M20 7h2"></path><path d="M7 20v2"></path><path d="M7 2v2"></path><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="8" y="8" width="8" height="8" rx="1"></rect></svg></span>
-      <header><small>NVIDIA BACKEND</small><h2 id="nvidia-runtime-title">Download NVIDIA backend?</h2><p id="nvidia-runtime-description">NAIM needs two runtime packs for this video card.</p></header>
+      <header><small>NVIDIA BACKEND</small><h2 id="nvidia-runtime-title">Download NVIDIA backend?</h2><p id="nvidia-runtime-description">{{app_name}} needs two runtime packs for this video card.</p></header>
       <div class="nvidia-runtime-size"><span><small id="nvidia-runtime-size-label">TO DOWNLOAD</small><strong id="nvidia-runtime-size-value">—</strong></span><em id="nvidia-runtime-architecture">—</em></div>
       <div class="nvidia-runtime-dialog-progress" id="nvidia-runtime-dialog-progress" hidden><span><i id="nvidia-runtime-dialog-fill"></i></span><small id="nvidia-runtime-dialog-status">Preparing download</small></div>
       <footer><button type="button" id="nvidia-runtime-cancel">Cancel</button><button class="is-primary" type="button" id="nvidia-runtime-confirm">Download</button></footer>
@@ -1507,7 +1507,7 @@
   <div class="config-recovery-shield" id="config-recovery-shield" hidden aria-hidden="true">
     <section class="config-recovery-panel" role="dialog" aria-modal="true" aria-labelledby="config-recovery-title" aria-describedby="config-recovery-description">
       <span class="config-recovery-icon" aria-hidden="true"><svg class="lucide-icon" viewBox="0 0 24 24" data-lucide="file-warning"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M12 12v4"></path><path d="M12 19h.01"></path></svg></span>
-      <header><small>CONFIGURATION</small><h2 id="config-recovery-title">Unable to restore configuration</h2><p id="config-recovery-description">NAIM opened the newest working configuration. The damaged file was left unchanged.</p></header>
+      <header><small>CONFIGURATION</small><h2 id="config-recovery-title">Unable to restore configuration</h2><p id="config-recovery-description">{{app_name}} opened the newest working configuration. The damaged file was left unchanged.</p></header>
       <strong class="config-recovery-profile" id="config-recovery-profile" data-i18n-literal></strong>
       <small class="config-recovery-status" id="config-recovery-status" hidden></small>
       <footer><button type="button" data-config-recovery-action="dismiss">Ignore</button><button type="button" class="is-danger" data-config-recovery-action="delete">Delete config</button></footer>
@@ -1580,7 +1580,7 @@
       <header>
         <small id="action-confirm-kicker">APPLICATION ACTION</small>
         <h2 id="action-confirm-title">Hide the menu?</h2>
-        <p id="action-confirm-description">NAIM will keep running. Press Insert or Home to show the menu again.</p>
+        <p id="action-confirm-description">{{app_name}} will keep running. Press Insert or Home to show the menu again.</p>
       </header>
       <label class="action-confirm-release" id="action-confirm-release-row">
         <span><strong>Unload menu from memory</strong><small>The menu will load again the next time it opens</small></span>
@@ -1694,7 +1694,7 @@
         <span><small>LATENCY P95</small><strong id="mouse-calibration-latency">—</strong></span>
       </div>
       <div class="mouse-calibration-progress-track" aria-hidden="true"><i id="mouse-calibration-progress-fill"></i></div>
-      <button class="hotkey-key-capture mouse-calibration-key-capture" id="mouse-calibration-key-capture" type="button"><span><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="keyboard"><path d="M10 8h.01"></path><path d="M12 12h.01"></path><path d="M14 8h.01"></path><path d="M16 12h.01"></path><path d="M18 8h.01"></path><path d="M6 8h.01"></path><path d="M7 16h10"></path><path d="M8 12h.01"></path><rect width="20" height="16" x="2" y="4" rx="2"></rect></svg><span><strong>Start key</strong><small>Switch to the game, then press this key</small></span></span><b id="mouse-calibration-key-name">F8</b></button>
+      <button class="hotkey-key-capture mouse-calibration-key-capture" id="mouse-calibration-key-capture" type="button"><span><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="keyboard"><path d="M10 8h.01"></path><path d="M12 12h.01"></path><path d="M14 8h.01"></path><path d="M16 12h.01"></path><path d="M18 8h.01"></path><path d="M6 8h.01"></path><path d="M7 16h10"></path><path d="M8 12h.01"></path><rect width="20" height="16" x="2" y="4" rx="2"></rect></svg><span><strong>Start key</strong><small>Switch to the game, then press this key</small></span></span><b id="mouse-calibration-key-name">Mouse4</b></button>
       <p class="mouse-calibration-cancel-hint"><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="circle-x"><circle cx="12" cy="12" r="10"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg><span>To cancel:</span><kbd>Esc</kbd><span>or press LMB / RMB 5 times</span></p>
       <div class="mouse-calibration-actions">
         <button type="button" id="mouse-calibration-close">Close</button>
@@ -1712,7 +1712,7 @@
       <header>
         <small>WEB PANEL CONNECTION</small>
         <h2 id="remote-connection-title">Connection interrupted</h2>
-        <p>The desktop application is not responding. Your current page stays open while NAIM reconnects.</p>
+        <p>The desktop application is not responding. Your current page stays open while {{app_name}} reconnects.</p>
       </header>
       <div class="remote-connection-state"><i></i><span>Retrying automatically</span></div>
       <button type="button" id="remote-connection-retry">Retry now</button>
@@ -1843,7 +1843,7 @@
     <div class="visual-element-panel" data-visual-panel="actions" hidden>
       <section class="visual-settings-section"><div class="visual-section-heading"><strong>Events</strong><small>Choose which realtime actions enter the feed</small></div>
         <div class="visual-compact-toggle"><span><strong>Aim and targets</strong><small>Target acquisition, body part changes and release</small></span><label class="toggle"><input id="action-feed-aim-events" type="checkbox" checked><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
-        <div class="visual-compact-toggle"><span><strong>Firing</strong><small>Only shots and button states generated by NAIM Auto Fire</small></span><label class="toggle"><input id="action-feed-fire-events" type="checkbox" checked><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
+        <div class="visual-compact-toggle"><span><strong>Firing</strong><small>Only shots and button states generated by {{app_name}} Auto Fire</small></span><label class="toggle"><input id="action-feed-fire-events" type="checkbox" checked><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
         <div class="visual-compact-toggle"><span><strong>Assistance</strong><small>Auto Stop, AutoZoom, RCS and hit-chance decisions</small></span><label class="toggle"><input id="action-feed-assist-events" type="checkbox" checked><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
       </section>
       <section class="visual-settings-section"><div class="visual-section-heading"><strong>Layout</strong><small>Fixed-width rows that never resize with their text</small></div>
@@ -1853,7 +1853,7 @@
         <label class="visual-popover-range range-row"><span><strong>Horizontal position</strong><output id="action-feed-position-x-value">1.5%</output></span><input id="action-feed-position-x" data-setting="action_feed_position_x" data-scale="100" data-suffix="%" type="range" min="0" max="1" step="0.005" value="0.015"></label>
         <label class="visual-popover-range range-row"><span><strong>Vertical position</strong><output id="action-feed-position-y-value">8.5%</output></span><input id="action-feed-position-y" data-setting="action_feed_position_y" data-scale="100" data-suffix="%" type="range" min="0" max="1" step="0.005" value="0.085"></label>
       </section>
-      <section class="visual-settings-section"><div class="visual-section-heading"><strong>Style</strong><small>NAIM surface and readable event text</small></div>
+      <section class="visual-settings-section"><div class="visual-section-heading"><strong>Style</strong><small>{{app_name}} surface and readable event text</small></div>
         <label class="visual-color-row visual-text-color-row"><span><i></i><span><strong>Text color</strong><small>Primary action description</small></span></span><input id="action-feed-content-color" type="color" value="#f2f2f4"></label>
         <label class="visual-color-row visual-text-color-row"><span><i></i><span><strong>Background color</strong><small>Fixed event-row surface</small></span></span><input id="action-feed-background-color" type="color" value="#0b0d12"></label>
         <label class="visual-popover-range range-row"><span><strong>Background opacity</strong><output id="action-feed-background-opacity-value">82%</output></span><input id="action-feed-background-opacity" data-setting="action_feed_background_opacity" data-scale="100" data-suffix="%" type="range" min="0" max="1" step="0.01" value="0.82"></label>
@@ -1927,9 +1927,9 @@
     <div class="visual-element-panel mouse-trajectory-settings" id="mouse-trajectory-settings" data-visual-panel="motion" hidden>
       <section class="visual-settings-section"><div class="visual-section-heading"><strong>Content</strong><small>Choose which parts of the handoff are visible</small></div>
         <div class="visual-compact-toggle"><span><strong>Player movement</strong><small>Green physical mouse trajectory</small></span><label class="toggle"><input id="mouse-motion-player-enabled" type="checkbox" checked><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
-        <div class="visual-compact-toggle"><span><strong>Assistance start</strong><small>Purple ring where NAIM first takes part</small></span><label class="toggle"><input id="mouse-motion-assist-marker-enabled" type="checkbox" checked><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
+        <div class="visual-compact-toggle"><span><strong>Assistance start</strong><small>Purple ring where {{app_name}} first takes part</small></span><label class="toggle"><input id="mouse-motion-assist-marker-enabled" type="checkbox" checked><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
       </section>
-      <section class="visual-settings-section"><div class="visual-section-heading"><strong>Trail</strong><small>Actual calibrated player and NAIM movement</small></div>
+      <section class="visual-settings-section"><div class="visual-section-heading"><strong>Trail</strong><small>Actual calibrated player and {{app_name}} movement</small></div>
         <label class="select-row visual-select-row"><span><strong>Fade by</strong><small>Remove old trajectory by age or travelled distance</small></span><select id="mouse-motion-fade-mode"><option value="0">Time</option><option value="1">Distance</option></select></label>
         <label class="visual-popover-range range-row mouse-motion-time-row"><span><strong>Trail lifetime</strong><output id="mouse-motion-fade-seconds-value">0.85 s</output></span><input id="mouse-motion-fade-seconds" data-setting="mouse_motion_fade_seconds" data-suffix=" s" data-decimals="2" type="range" min="0.2" max="3" step="0.05" value="0.85"></label>
         <label class="visual-popover-range range-row mouse-motion-distance-row" hidden><span><strong>Trail length</strong><output id="mouse-motion-fade-distance-value">190 px</output></span><input id="mouse-motion-fade-distance" data-setting="mouse_motion_fade_distance" data-suffix=" px" type="range" min="40" max="420" step="5" value="190"></label>
@@ -1938,7 +1938,7 @@
       </section>
       <section class="visual-settings-section"><div class="visual-section-heading"><strong>Colors</strong><small>Reference green, gold and violet palette</small></div>
         <label class="visual-color-row visual-text-color-row"><span><i></i><span><strong>Player</strong><small>Physical mouse movement</small></span></span><input id="mouse-motion-player-color" type="color" value="#75ce9b"></label>
-        <label class="visual-color-row visual-text-color-row"><span><i></i><span><strong>NAIM</strong><small>Movement emitted by Aim assistance</small></span></span><input id="mouse-motion-naim-color" type="color" value="#e3ad49"></label>
+        <label class="visual-color-row visual-text-color-row"><span><i></i><span><strong>{{app_name}}</strong><small>Movement emitted by Aim assistance</small></span></span><input id="mouse-motion-naim-color" type="color" value="#e3ad49"></label>
         <label class="visual-color-row visual-text-color-row"><span><i></i><span><strong>Handoff marker</strong><small>Assistance start ring</small></span></span><input id="mouse-motion-marker-color" type="color" value="#a879ff"></label>
       </section>
     </div>
@@ -2060,7 +2060,7 @@
           </div>
         </div>
       </div>
-      <footer><small>Changes are saved in the current NAIM configuration</small><button class="settings-button" id="anti-flash-crosshair-done" type="button">Done</button></footer>
+      <footer><small>Changes are saved in the current {{app_name}} configuration</small><button class="settings-button" id="anti-flash-crosshair-done" type="button">Done</button></footer>
     </section>
   </div>
 
@@ -2070,7 +2070,7 @@
     <div class="hotkey-mode" id="hotkey-mode"><span><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="toggle-right"><circle cx="15" cy="12" r="3"></circle><rect width="20" height="14" x="2" y="5" rx="7"></rect></svg><strong>Mode</strong></span><div><i aria-hidden="true"></i><button id="hotkey-mode-press" type="button" data-mode="press">Press</button><button id="hotkey-mode-hold" type="button" data-mode="hold">Hold</button><button id="hotkey-mode-toggle" type="button" data-mode="toggle">Toggle</button></div></div>
     <div class="hotkey-value" id="hotkey-value-row"><span><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="sliders-horizontal"><path d="M10 5H3"></path><path d="M12 19H3"></path><path d="M14 3v4"></path><path d="M16 17v4"></path><path d="M21 12h-9"></path><path d="M21 19h-5"></path><path d="M21 5h-7"></path><path d="M8 10v4"></path><path d="M8 12H3"></path></svg><strong>Value</strong></span><input id="hotkey-value-input" type="number" step="any"><select id="hotkey-value-select"></select><div class="choice-dropdown choice-dropdown-multiple hotkey-value-multi" id="hotkey-value-multi" hidden><button class="choice-dropdown-trigger" id="hotkey-value-multi-trigger" type="button" aria-haspopup="listbox" aria-expanded="false"><span>Select</span><i></i></button><div class="choice-dropdown-menu" id="hotkey-value-multi-menu" role="listbox" aria-multiselectable="true"></div></div></div>
     <div class="hotkey-value-warning" id="hotkey-value-warning" role="status" hidden><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="triangle-alert"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg><span>Bind value is outside the recommended slider range. It will still be applied, but may cause problems with this function.</span></div>
-    <div class="hotkey-suppression"><span><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="eye-off"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"></path><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"></path><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"></path><path d="m2 2 20 20"></path></svg><strong>Suppression</strong><small>Hide the physical press; the NAIM bind still works</small></span><label class="toggle hotkey-visible-toggle"><input id="hotkey-suppression" type="checkbox"><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
+    <div class="hotkey-suppression"><span><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="eye-off"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"></path><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"></path><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"></path><path d="m2 2 20 20"></path></svg><strong>Suppression</strong><small>Hide the physical press; the {{app_name}} bind still works</small></span><label class="toggle hotkey-visible-toggle"><input id="hotkey-suppression" type="checkbox"><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
     <div class="hotkey-visible"><span><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="eye"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg><strong>Visible</strong><small>Show in Active binds</small></span><label class="toggle hotkey-visible-toggle"><input id="hotkey-visible" type="checkbox" checked><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
     <footer><button class="hotkey-delete" id="hotkey-delete" type="button"><svg class="lucide-icon" viewBox="0 0 24 24" aria-hidden="true" data-lucide="trash-2"><path d="M10 11v6"></path><path d="M14 11v6"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M3 6h18"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>Delete</button></footer>
   </section>
