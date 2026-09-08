@@ -1,0 +1,1 @@
+import{j as i}from"./index-DQ0tGK5h.js";function n({children:s,className:a="",...t}){return i.jsxs("label",{className:`naim-switch napi-native-toggle ${a}`.trim(),children:[i.jsx("input",{...t,type:"checkbox",role:"switch"}),i.jsx("i",{"aria-hidden":"true"}),i.jsx("span",{className:"naim-switch__label",children:s})]})}export{n as N};
