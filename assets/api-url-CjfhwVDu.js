@@ -1,0 +1,1 @@
+const t="https://api.neuralaim.ru",r=/^\/(?:web\/v1(?:\/|\?|$)|public\/reseller-logo\/)/;function a(e){if(!r.test(e)||/[\\\x00-\x20\x7f#]/.test(e)||!r.test(new URL(e,t).pathname))throw new Error("invalid_api_path");return t+e}export{a};
