@@ -18,10 +18,13 @@
         const redirectedPath = window.sessionStorage.getItem("naim-spa-redirect");
         if (redirectedPath) {
           window.sessionStorage.removeItem("naim-spa-redirect");
+          let redirectedState = null;
+          try { redirectedState = JSON.parse(window.sessionStorage.getItem("naim-spa-redirect-state") || "null"); } catch {}
+          window.sessionStorage.removeItem("naim-spa-redirect-state");
           const currentLocation = `${window.location.pathname}${window.location.search}${window.location.hash}`;
 
           if (redirectedPath !== currentLocation) {
-            window.history.replaceState(null, "", redirectedPath);
+            window.history.replaceState(redirectedState, "", redirectedPath);
           }
         }
 
