@@ -28,6 +28,13 @@
           }
         }
 
+        // Keep checkout capabilities out of analytics and browser-visible URLs.
+        const privateCheckout = new URLSearchParams(window.location.hash.slice(1));
+        if (privateCheckout.has('discount_code') || privateCheckout.has('reseller_checkout')) {
+          window.__naimCheckoutPrivate = Object.freeze({code:privateCheckout.get('discount_code')||'',reseller:privateCheckout.get('reseller_checkout')||''});
+          privateCheckout.delete('discount_code'); privateCheckout.delete('reseller_checkout');
+          window.history.replaceState(window.history.state,'',window.location.pathname+window.location.search+(privateCheckout.size?'#'+privateCheckout.toString():''));
+        }
         const query = new URLSearchParams(window.location.search);
         let hasReferralParam = false;
         let referral = "";
@@ -174,7 +181,7 @@
         ]
       }
     </script>
-    <script type="module" crossorigin src="/assets/index-DzjgerEn.js"></script>
+    <script type="module" crossorigin src="/assets/index-Cln0TbNW.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-BGsR8KZx.css">
   </head>
   <body>
